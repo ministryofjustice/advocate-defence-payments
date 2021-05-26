@@ -11,6 +11,9 @@ module TimedTransitions
       archived_pending_delete: Specification.new(Settings.timed_transition_pending_weeks, :destroy_claim)
     }.freeze
 
+    ARCHIVE_STATES = %w[authorised part_authorised refused rejected].freeze
+    DELETE_STATES = %w[draft archived_pending_delete].freeze
+
     def self.candidate_claims_ids
       Claim::BaseClaim.where(state: candidate_states)
                       .where('updated_at < ?', Settings.timed_transition_stale_weeks.weeks.ago).pluck(:id)
@@ -29,6 +32,10 @@ module TimedTransitions
       @dummy = dummy
     end
 
+    def self.create claim, dummy: false
+      klass(claim).new claim, dummy
+    end
+
     def run
       @claim.softly_deleted? ? destroy_claim : process_stale_claim
     end
@@ -38,6 +45,13 @@ module TimedTransitions
     end
 
     private
+
+    def self.klass claim
+      return TimedTransitions::Transitioner::Archive if ARCHIVE_STATES.include? claim.state
+      return TimedTransitions::Transitioner::Delete if DELETE_STATES.include? claim.state
+
+      TimedTransitions::Transitioner::Null
+    end
 
     def log_level
       @dummy ? :debug : :info
