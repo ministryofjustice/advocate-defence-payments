@@ -267,59 +267,6 @@ RSpec.describe TimedTransitions::Transitioner do
     end
 
     context 'with dummy run' do
-      context 'when transitioning to archived pending delete' do
-        context 'when last state transition less than 16 weeks ago' do
-          subject(:transitioner) { described_class.new(claim, true) }
-          let(:claim) { double Claim }
-
-          before do
-            allow(claim).to receive(:last_state_transition_time).at_least(:once).and_return(15.weeks.ago)
-            allow(claim).to receive(:state).and_return('authorised')
-            allow(claim).to receive(:softly_deleted?).and_return(false)
-          end
-
-          it 'does not call archive on claim' do
-            expect(transitioner).not_to receive(:archive)
-            expect(LogStuff).not_to receive(:debug)
-            transitioner.run
-          end
-        end
-
-        context 'when last state transition more than 16 weeks ago' do
-          before do
-            travel_to(17.weeks.ago) do
-              @claim = create :authorised_claim, case_number: 'A20164444'
-            end
-          end
-
-          it 'leaves the claim in authorised state' do
-            described_class.new(@claim, true).run
-            expect(@claim.reload.state).to eq 'authorised'
-          end
-
-          it 'writes to the log file' do
-            expect(LogStuff).to receive(:debug)
-              .with(
-                'TimedTransitions::Transitioner',
-                action: 'archive',
-                claim_id: @claim.id,
-                claim_state: 'authorised',
-                softly_deleted_on: @claim.deleted_at,
-                valid_until: @claim.valid_until,
-                dummy_run: true,
-                error: nil,
-                succeeded: false
-              )
-            described_class.new(@claim, true).run
-          end
-
-          it 'does not record a timed_transition in claim state transitions' do
-            described_class.new(@claim, true).run
-            expect(@claim.claim_state_transitions.map(&:reason_code)).not_to include('timed_transition')
-          end
-        end
-      end
-
       context 'when destroying' do
         context 'when last state transition less than 16 weeks ago' do
           subject(:transitioner) { described_class.new(claim, true) }

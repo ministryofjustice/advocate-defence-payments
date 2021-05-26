@@ -14,6 +14,19 @@ RSpec.shared_examples 'write transitioner log' do
   end
 end
 
+RSpec.shared_examples 'not write transitioner log' do
+  let(:succeeded) { true }
+  let(:log_level) { :info }
+
+  it 'does not write to the log file' do
+    allow(LogStuff).to receive(log_level)
+
+    transitioner.run
+
+    expect(LogStuff).not_to have_received(log_level)
+  end
+end
+
 RSpec.shared_examples 'transitioning to archived pending delete' do
   subject(:transitioner) { described_class.new(claim) }
 
@@ -82,6 +95,46 @@ RSpec.shared_examples 'transitioning to archived pending delete' do
       before { claim.defendants.first.representation_orders.first.update_attribute(:maat_reference, '999') }
 
       it { expect { transitioner.run }.to change(claim, :state).to 'archived_pending_delete' }
+    end
+  end
+end
+
+RSpec.shared_examples 'transitioning to archived pending delete (dummy)' do
+  context 'when last state transition less than 16 weeks ago' do
+    subject(:transitioner) { described_class.new(claim, true) }
+
+    before do
+      travel_to(15.weeks.ago) do
+        claim
+      end
+    end
+
+    it { expect { transitioner.run }.not_to change(claim, :state) }
+
+    it_behaves_like 'not write transitioner log' do
+      let(:log_level) { :debug }
+    end
+  end
+
+  context 'when last state transition more than 16 weeks ago' do
+    subject(:transitioner) { described_class.new(claim, true) }
+
+    before do
+      travel_to(17.weeks.ago) do
+        claim
+      end
+    end
+
+    it { expect { transitioner }.not_to change(claim, :state) }
+
+    it_behaves_like 'write transitioner log' do
+      let(:succeeded) { false }
+      let(:log_level) { :debug }
+    end
+
+    it 'does not record a timed_transition in claim state transitions' do
+      transitioner.run
+      expect(claim.claim_state_transitions.map(&:reason_code)).not_to include('timed_transition')
     end
   end
 end

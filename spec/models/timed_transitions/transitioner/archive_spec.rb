@@ -6,6 +6,7 @@ RSpec.describe TimedTransitions::Transitioner::Archive do
     let(:claim) { create :authorised_claim }
 
     include_examples 'transitioning to archived pending delete'
+    include_examples 'transitioning to archived pending delete (dummy)'
   end
 
   context 'with an authorised hardship claim' do
@@ -18,18 +19,21 @@ RSpec.describe TimedTransitions::Transitioner::Archive do
     let(:claim) { create :part_authorised_claim }
 
     include_examples 'transitioning to archived pending delete'
+    include_examples 'transitioning to archived pending delete (dummy)'
   end
 
   context 'with a refused claim' do
     let(:claim) { create :refused_claim }
 
     include_examples 'transitioning to archived pending delete'
+    include_examples 'transitioning to archived pending delete (dummy)'
   end
 
   context 'with a rejected claim' do
     let(:claim) { create :rejected_claim }
 
     include_examples 'transitioning to archived pending delete'
+    include_examples 'transitioning to archived pending delete (dummy)'
   end
 
   context 'with a rejected hardship claim' do
