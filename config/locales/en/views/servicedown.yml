@@ -1,0 +1,7 @@
+---
+en:
+  servicedown:
+    show:
+      page_heading: "The service is unavailable"
+      page_unavailable: "This service is not available right now due to planned maintenance work."
+      page_unavailable_html: "Please try again later."

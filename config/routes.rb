@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   get 'dummy_exception', to: 'errors#dummy_exception'
   get 'ping',           to: 'heartbeat#ping', format: :json
-  get 'healthcheck',    to: 'heartbeat#healthcheck',  as: 'healthcheck', format: :json
+  get 'healthcheck',    to: 'heartbeat#healthcheck', as: 'healthcheck', format: :json
 
-  match '(*any)', to: 'pages#servicedown', via: :all if Settings.maintenance_mode_enabled?
+  match '(*any)', to: 'servicedown#show', via: :all if Settings.maintenance_mode_enabled?
 
-  get 'servicedown',    to: 'pages#servicedown',      as: :service_down_page
+  get 'servicedown', to: 'servicedown#show', as: :service_down_page
   get '/tandcs',        to: 'pages#tandcs',           as: :tandcs_page
   get '/vendor_tandcs', to: 'pages#vendor_tandcs',    as: :vendor_tandcs_page
   get '/contact_us',    to: 'pages#contact_us',       as: :contact_us_page
@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   get '/accessibility-statement', to: 'pages#accessibility_statement', as: :accessibility_statement
 
   get 'vat' => "vat_rates#index"
-
   get 'json_schemas/:schema', to: 'json_template#show', as: :json_schemas
 
   get '/404', to: 'errors#not_found', as: :error_404

@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   load_and_authorize_resource
 
-  rescue_from Exception do |exception|
+  rescue_from StandardError do |exception|
     raise unless Rails.env.production?
 
     Sentry.capture_exception(exception)

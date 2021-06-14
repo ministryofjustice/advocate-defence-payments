@@ -52,7 +52,7 @@ RSpec.describe 'Servicedown mode', type: :request do
     context 'web page requests (html)' do
       context 'sign in' do
         before { get '/users/sign_in' }
-        it_behaves_like 'maintenance page', status: 200
+        it_behaves_like 'maintenance page'
       end
     end
 
@@ -64,7 +64,7 @@ RSpec.describe 'Servicedown mode', type: :request do
       let(:user) { create(:case_worker).user }
       context '/case_workers/claims' do
         before { get case_workers_home_path }
-        it_behaves_like 'maintenance page', status: 200
+        it_behaves_like 'maintenance page'
       end
     end
 
@@ -74,12 +74,12 @@ RSpec.describe 'Servicedown mode', type: :request do
 
       context '/external_user/claims' do
         before { get external_users_claims_path }
-        it_behaves_like 'maintenance page', status: 200
+        it_behaves_like 'maintenance page'
       end
 
       context '/advocates/claims/new' do
         before { get new_advocates_claim_path }
-        it_behaves_like 'maintenance page', status: 200
+        it_behaves_like 'maintenance page'
       end
     end
   end
@@ -96,7 +96,7 @@ RSpec.describe 'Servicedown mode', type: :request do
   context 'formatted responses' do
     context 'html' do
       before { get '/', params: { format: :html } }
-      it_behaves_like 'maintenance page', status: 200
+      it_behaves_like 'maintenance page'
     end
 
     context 'json' do

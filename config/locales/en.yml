@@ -41,10 +41,6 @@ en:
       page_heading: Claim for crown court defence API
     api_release_notes:
       page_heading: API release notes
-    servicedown:
-      page_heading: "The service is unavailable"
-      page_unavailable: "This service is not available right now due to planned maintenance work."
-      page_unavailable_html: "Please try again later."
     timed_retention:
       page_heading: "Time-limited retention of claims"
       paragraph_1: "Starting from 19th September 2016, claims will only be retained on the system for a limited period, and not indefinitely."
