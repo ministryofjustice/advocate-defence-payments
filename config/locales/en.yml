@@ -219,7 +219,13 @@ en:
         supplier_number:
           attributes:
             supplier_number:
-              invalid: Enter a valid LGFS supplier number
+              blank: blank
+              invalid: invalid
+              # blank: Enter a LGFS supplier number
+              # invalid: Enter a valid LGFS supplier number
+            postcode:
+              invalid: invalid
+              # invalid: Enter a valid postcode
         provider:
           attributes:
             base:

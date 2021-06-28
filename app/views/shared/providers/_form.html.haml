@@ -1,5 +1,5 @@
 = form_with model: @provider, url: form_url, builder: GdsAdpFormBuilder, html: { novalidate: true } do |f|
-  = f.govuk_error_summary
+  = f.govuk_error_summary(presenter: @error_presenter)
 
   = f.govuk_text_field :name,
     hint: { text: t('.provider_name_hint') },

@@ -14,6 +14,7 @@ class ExternalUsers::Admin::ProvidersController < ExternalUsers::Admin::Applicat
     if @provider.update(provider_params.except(*filtered_params))
       redirect_to external_users_admin_provider_path, notice: 'Provider successfully updated'
     else
+      @error_presenter = ErrorPresenter.new(@provider)
       render 'shared/providers/edit'
     end
   end

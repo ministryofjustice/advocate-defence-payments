@@ -24,9 +24,19 @@ class ErrorDetailCollection
   end
 
   def short_messages_for(fieldname)
-    error_detail_array = @error_details[fieldname]
-    return '' if error_detail_array.nil?
-    error_detail_array.map(&:short_message).join(', ')
+    error_details_for(fieldname).map(&:short_message).join(', ')
+  end
+
+  def long_messages_for(fieldname)
+    error_details_for(fieldname).map(&:long_message).join(', ')
+  end
+
+  def api_messages_for(fieldname)
+    error_details_for(fieldname).map(&:api_message).join(', ')
+  end
+
+  def error_details_for(fieldname)
+    self[fieldname] || []
   end
 
   def header_errors

@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/jsugarman/govuk_design_system_formbuilder.git
-  revision: 71db80b0baa240e59804198743c277433da84e25
+  revision: 911022c3b0ef67461e082983fafa81acaa7baf8e
   branch: debug-multiple-renders
   specs:
     govuk_design_system_formbuilder (2.7.1)

@@ -70,7 +70,7 @@ class ErrorMessageTranslator
   end
 
   def key_refers_to_numbered_submodel?(key)
-    key =~ @regex
+    key.match?(@regex)
   end
 
   def key_refers_to_unnumbered_submodel?(key)
@@ -81,13 +81,14 @@ class ErrorMessageTranslator
     attribute = self.class.association_key(key)
     while attribute =~ @regex
       parent_model = Regexp.last_match(1)
-      submodel_id  = Regexp.last_match(3)
+      parent_model.slice!('_attributes')
+      submodel_id = Regexp.last_match(3)
       attribute = Regexp.last_match(4)
 
       # store each submodel instance number against parent model too
       @submodel_numbers[parent_model] = submodel_id
     end
-    [parent_model, attribute]
+    [parent_model.singularize, attribute]
   end
 
   def extract_last_submodel_attribute(translations, key)
@@ -111,8 +112,10 @@ class ErrorMessageTranslator
 
   def substitute_submodel_numbers_and_names(message)
     @submodel_numbers.each do |submodel_name, number|
-      substitution_key = '#{' + submodel_name + '}'
-      substitution_value = [to_ordinal(number), humanize_submodel_name(submodel_name)].select(&:present?).join(' ')
+      sname = submodel_name.singularize
+      number = number.to_i + 1
+      substitution_key = '#{' + sname + '}'
+      substitution_value = [to_ordinal(number), humanize_submodel_name(sname)].select(&:present?).join(' ')
       message = message.sub(substitution_key, substitution_value)
     end
     # clean out unused message substitution keys

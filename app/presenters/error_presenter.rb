@@ -12,9 +12,10 @@ class ErrorPresenter
     generate_messages
   end
 
-  delegate :errors_for?, :header_errors, :size, :short_messages_for, to: :error_details
+  delegate :errors_for?, :header_errors, :size, :short_messages_for, :long_messages_for, :api_messages_for, to: :error_details
   alias key? errors_for?
   alias field_level_error_for short_messages_for
+  alias summary_error_for long_messages_for
 
   private
 

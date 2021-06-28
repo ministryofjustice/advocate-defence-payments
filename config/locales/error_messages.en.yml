@@ -1876,6 +1876,19 @@ hardship_fee:
       short: Do not enter an amount
       api: Do not enter an amount for the hardship fee
 
+lgfs_supplier_number:
+  _seq: 30
+  postcode:
+    invalid:
+      long: "Enter a valid postcode for the #{lgfs_supplier_number}"
+      short: Enter a valid postcode
+      api: Enter a valid postcode
+  supplier_number:
+    invalid:
+      long: "Enter a valid LGFS supplier number for the #{lgfs_supplier_number}"
+      short: Enter a valid LGFS supplier number
+      api: Enter a valid LGFS supplier number
+
 total:
   _seq: 9999
   numericality:
