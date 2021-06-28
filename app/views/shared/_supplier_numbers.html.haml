@@ -1,13 +1,13 @@
 .govuk-grid-row
   .govuk-grid-column-full
     #supplier-numbering.supplier-numbers-wrapper.fx-numberedList-hook
-      - @collection = f.object.lgfs_supplier_numbers.present? ? f.object.lgfs_supplier_numbers : [f.object.lgfs_supplier_numbers.build]
+      - @lgfs_supplier_numbers = f.object.lgfs_supplier_numbers.present? ? f.object.lgfs_supplier_numbers : [f.object.lgfs_supplier_numbers.build]
 
-      = f.fields_for :lgfs_supplier_numbers, @collection do |snf|
-        = render partial: 'shared/supplier_number_fields', locals: { f: snf, collection: @collection }
+      = f.fields_for :lgfs_supplier_numbers, @lgfs_supplier_numbers do |snf|
+        = render partial: 'shared/supplier_number_fields', locals: { f: snf }
 
     .govuk-form-group.form-actions
-      = link_to_add_association t('.add_supplier'), f, :lgfs_supplier_numbers, partial: 'shared/supplier_number_fields', render_options: { locals: { collection: @collection } }, class: 'govuk-button app-button--blue', data: { 'association-insertion-method': 'append', 'association-insertion-node': '.supplier-numbers-wrapper', module: 'govuk-button' }, role: 'button', draggable: 'false'
+      = link_to_add_association t('.add_supplier'), f, :lgfs_supplier_numbers, partial: 'shared/supplier_number_fields', render_options: { locals: { collection: @lgfs_supplier_numbers } }, class: 'govuk-button app-button--blue', data: { 'association-insertion-method': 'append', 'association-insertion-node': '.supplier-numbers-wrapper', module: 'govuk-button' }, role: 'button', draggable: 'false'
 
     = govuk_detail t('.postcode_help.heading') do
       = t('.postcode_help.text_html')
