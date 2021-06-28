@@ -50,7 +50,7 @@ class BaseSubModelValidator < BaseValidator
   end
 
   def copy_errors_to_base_record(base_record, association_name, associated_record, record_num)
-    error_prefix = "#{association_name.to_s.singularize}_#{record_num + 1}"
+    error_prefix = "#{association_name}_attributes_#{record_num}"
     associated_record.errors.each do |error|
       error_suffix = suffix_error_fields? ? "_#{error.attribute}" : ''
       base_record_error_key = [error_prefix, error_suffix].join.to_sym
