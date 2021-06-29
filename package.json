@@ -27,6 +27,7 @@
     "jquery": "^3.6.0",
     "jquery-accessible-accordion-aria": "^2.6.1",
     "jquery-highlight": "^3.5.0",
+    "jquery-migrate": "^3.3.2",
     "jquery-throttle-debounce": "^1.0.0",
     "jquery-ujs": "^1.2.3",
     "jquery-xpath": "^0.3.1",
