@@ -21,32 +21,14 @@ class ErrorPresenter
   def generate_messages
     @errors.each do |error|
       attribute = error.attribute
-      messages = populate_messages(error)
-      next if @error_details[attribute] && @error_details[attribute][0].long_message.eql?(messages.long)
+      messages = ErrorMessageTranslator.new(@translations, error.attribute, error.message)
+      next if @error_details[attribute] && @error_details[attribute][0].long_message.eql?(messages.long_message)
       @error_details[attribute] = ErrorDetail.new(
         attribute,
-        messages.long,
-        messages.short,
-        messages.api,
+        messages.long_message,
+        messages.short_message,
+        messages.api_message,
         generate_sequence(attribute)
-      )
-    end
-  end
-
-  def populate_messages(error)
-    emt = ErrorMessageTranslator.new(@translations, error.attribute, error.message)
-
-    if emt.translation_found?
-      OpenStruct.new(
-        long: emt.long_message,
-        short: emt.short_message,
-        api: emt.api_message
-      )
-    else
-      OpenStruct.new(
-        long: generate_standard_long_message(error),
-        short: generate_standard_short_message(error),
-        api: generate_standard_api_message(error)
       )
     end
   end
@@ -88,21 +70,5 @@ class ErrorPresenter
     rescue StandardError
       99_999
     end
-  end
-
-  def generate_link(fieldname)
-    '#' + fieldname
-  end
-
-  def generate_standard_long_message(error)
-    "#{error.attribute.to_s.humanize} #{error.message.humanize.downcase}"
-  end
-
-  def generate_standard_short_message(error)
-    error.message.humanize
-  end
-
-  def generate_standard_api_message(error)
-    "#{error.attribute.to_s.humanize} #{error.message.humanize.downcase}"
   end
 end

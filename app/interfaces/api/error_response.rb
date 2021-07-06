@@ -50,10 +50,6 @@ module API
       YAML.load_file(message_file)
     end
 
-    def fallback_api_message(field_name, error)
-      "#{field_name.to_s.humanize} #{error.humanize.downcase}"
-    end
-
     def submodel_prefix
       submodel_instance_num = ''
       m = @model
@@ -78,11 +74,7 @@ module API
         message = error.message
         field_name = format_field_name(error.attribute)
         emt = ErrorMessageTranslator.new(@translations, field_name, message)
-        if emt.translation_found?
-          error_messages.push(error: emt.api_message)
-        else
-          error_messages.push(error: fallback_api_message(field_name, message))
-        end
+        error_messages.push(error: emt.api_message)
       end
     end
 
