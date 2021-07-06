@@ -1,15 +1,17 @@
 .govuk-grid-column-one-third
   %p.govuk-heading-l
-    %span.heading-secondary
+    %span.govuk-caption-l
       = t('.total_outstanding')
     = number_to_currency(financial_summary.total_outstanding_claim_value)
-  %p
+
+  %p.govuk-body
     = link_to t('.view_details_outstanding_html'), outstanding_external_users_claims_path, id: 'outstanding_claim_details', 'aria-label': t('.outstanding_claim_details_label')
 
 .govuk-grid-column-one-third
   %p.govuk-heading-l
-    %span.heading-secondary
+    %span.govuk-caption-l
       = t('.total_authorised')
     = number_to_currency(financial_summary.total_authorised_claim_value)
-  %p
+
+  %p.govuk-body
     = link_to t('.view_details_authorised_html'), authorised_external_users_claims_path, id: 'authorised_claim_details','aria-label': t('.authorised_claim_details_label')

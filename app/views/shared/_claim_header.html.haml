@@ -1,43 +1,45 @@
 .claim-hgroup
-  .govuk-grid-row{ class: 'govuk-!-margin-bottom-3' }
+  .govuk-grid-row
     .govuk-grid-column-one-third
       %h1.govuk-heading-l
-        = t('.case_number')
-        %span.case-number-header
-          = claim.formatted_case_number
-          %span.unique-id-small= claim.unique_id
-    .govuk-grid-column-one-third
-      .claim-status
-        = t('.status')
-        .govuk-grid-row
-          .govuk-grid-column-full
-            = govuk_tag claim.state.humanize, class: "app-tag--#{claim.state}"
+        %span.govuk-caption-l
+          = t('.case_number')
+        = claim.formatted_case_number
+        %span.unique-id-small= claim.unique_id
 
     .govuk-grid-column-one-third
-      %h2.govuk-heading-m
-        = t('.assessment_date')
-        %span.case-number-header
-          = claim.assessment_date
+      %p.govuk-heading-l
+        %span.govuk-caption-l
+          = t('.status')
+        = govuk_tag claim.state.humanize, class: "app-tag--#{claim.state}"
 
-  .govuk-grid-row{ class: 'govuk-!-margin-bottom-3' }
     .govuk-grid-column-one-third
-      %h2.govuk-heading-m
-        = t('.defendant_names')
-        %span.case-number-header
-          = claim.defendant_name_and_initial
-        %span
-          = claim.other_defendant_summary
-    .govuk-grid-column-one-third
-      %h2.govuk-heading-m
-        = t('.provider_type')
-        %span.case-number-header
-          = claim.provider.name
+      %p.govuk-heading-l
+        %span.govuk-caption-l
+          = t('.assessment_date')
+        = claim.assessment_date
 
+  .govuk-grid-row
+    .govuk-grid-column-one-third
+      %p.govuk-heading-l
+        %span.govuk-caption-l
+          = t('.defendant_names')
+        = claim.defendant_name_and_initial
+        = claim.other_defendant_summary
+
+    .govuk-grid-column-one-third
+      %p.govuk-heading-l
+        %span.govuk-caption-l
+          = t('.provider_type')
+        = claim.provider.name
 
     .govuk-grid-column-one-third.claim-detail-actions
       - if current_user.persona.is_a?(ExternalUser)
         - if claim.editable?
-          = t('.actions')
+          %p.govuk-heading-l
+            %span.govuk-caption-l
+              = t('.actions')
+
           .action-wrapper
             = govuk_link_button(t('buttons.edit_draft'), edit_polymorphic_path(claim), class: 'edit-claim')
 
@@ -50,7 +52,10 @@
             = govuk_link_button(t('buttons.delete_draft'), external_users_claim_path(claim), class: 'delete-draft', 'data-method': 'delete', 'data-confirm': t('.confirm_text'))
 
         - if claim.archivable?
-          = t('.actions')
+          %p.govuk-heading-l
+            %span.govuk-caption-l
+              = t('.actions')
+
           .action-wrapper
             - if claim.rejected?
               = button_to t('.redraft'), clone_rejected_external_users_claim_path(claim), method: 'patch', class: 'govuk-button resubmit-claim', form_class: 'inline-form', data: { module: 'govuk-button' }, role: 'button', draggable: 'false'
@@ -58,6 +63,9 @@
             = govuk_link_button(t('.archive'), external_users_claim_path(claim), 'data-method': 'delete', 'data-confirm': t('.confirm_text'))
 
         - if claim.archived_pending_delete? || claim.archived_pending_review?
-          = t('.actions')
+          %p.govuk-heading-l
+            %span.govuk-caption-l
+              = t('.actions')
+
           .action-wrapper
             = button_to t('.unarchive'), unarchive_external_users_claim_path(claim), method: 'patch', class: 'govuk-button', form_class: 'inline-form', data: { module: 'govuk-button' }, role: 'button', draggable: 'false'

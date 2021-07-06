@@ -61,10 +61,6 @@
     }
   }
 
-  .claim-status h3 {
-    @include pagebreak;
-  }
-
   #claim-accordion {
     button {
       @include pagebreak;
