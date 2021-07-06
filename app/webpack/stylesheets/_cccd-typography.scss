@@ -1,4 +1,8 @@
-// Typography Settings
+main,
+p {
+  @extend %govuk-body-m;
+}
+
 .bold-xsmall {
   @include bold-14;
 }

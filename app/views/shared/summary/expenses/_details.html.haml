@@ -2,27 +2,27 @@
   %ul
     - if claim.lgfs?
       %li
-        %span.bold
+        %span{ class: 'govuk-!-font-weight-bold' }
           = succeed ':' do
             = t('.origin')
         = claim.supplier_name_with_postcode
 
     %li
-      %span.bold
+      %span{ class: 'govuk-!-font-weight-bold' }
         = succeed ':' do
           = t('.destination')
       = expense.location_with_postcode
 
     - if current_user_is_caseworker? && expense.distance?
       %li{ class: ('error' if expense.distance_gt_calculated?) }
-        %span.bold
+        %span{ class: 'govuk-!-font-weight-bold' }
           = succeed ':' do
             = t(expense.distance_label)
         = t('.distance_count', count: expense.distance)
 
       - if expense.distance_gt_calculated?
         %li{ class: ('error' if expense.distance_gt_calculated?) }
-          %span.bold
+          %span{ class: 'govuk-!-font-weight-bold' }
             = succeed ':' do
               = t('.distance_calculated')
           = expense.pretty_calculated_distance
@@ -34,20 +34,20 @@
     - else
       - if expense.distance?
         %li
-          %span.bold
+          %span{ class: 'govuk-!-font-weight-bold' }
             = succeed ':' do
               = t('.distance')
           = t('.distance_count', count: expense.distance)
 
     %li{ class: ('error' if current_user_is_caseworker? && claim.lgfs? && expense.mileage_rate_id.eql?(2)) }
-      %span.bold
+      %span{ class: 'govuk-!-font-weight-bold' }
         = succeed ':' do
           = t('.cost')
       = expense.mileage_rate
 
     - if expense.hours?
       %li
-        %span.bold
+        %span{ class: 'govuk-!-font-weight-bold' }
           = succeed ':' do
             = t('.hours')
         = expense.hours

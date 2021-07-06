@@ -1,4 +1,5 @@
-%span.bold
-  = @claim.hardship? ? t('dictionary.attributes.claims.case_stage') :t('dictionary.attributes.claims.case_type')
 %p
-= @claim.hardship? ? claim.case_stage.description : claim.case_type.name
+  %span{ class: 'govuk-!-font-weight-bold' }
+    = @claim.hardship? ? t('dictionary.attributes.claims.case_stage') :t('dictionary.attributes.claims.case_type')
+  %br
+  = @claim.hardship? ? claim.case_stage.description : claim.case_type.name

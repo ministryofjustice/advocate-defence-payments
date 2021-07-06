@@ -1,23 +1,23 @@
 - claim_fields = %i[external_users claims offence_details fields]
-%span.bold
+%span{ class: 'govuk-!-font-weight-bold' }
   = t('dictionary.attributes.claims.offence')
 
 %ul.list.list-bullet
   - if claim.agfs_reform?
     %li
-      %span.bold>
+      %span{ class: 'govuk-!-font-weight-bold' }
         = t('offence_class', scope: claim_fields)
       \:
       = claim.offence&.offence_category ? claim.offence.offence_category.description : t("general.not_provided")
 
     %li
-      %span.bold>
+      %span{ class: 'govuk-!-font-weight-bold' }
         = t('offence_band', scope: claim_fields)
       \:
       = claim.offence&.offence_band ? claim.offence.offence_band.description : t("general.not_provided")
 
     %li
-      %span.bold>
+      %span{ class: 'govuk-!-font-weight-bold' }
         = t('offence_category', scope: claim_fields)
       \:
       = claim.offence ? claim.offence.description : t("general.not_provided")
@@ -25,12 +25,12 @@
   - else
 
     %li
-      %span.bold>
+      %span{ class: 'govuk-!-font-weight-bold' }
         = t("offence_class", scope: claim_fields)
       \:
       = claim.offence ? claim.offence.offence_class : t("general.not_provided")
     %li
-      %span.bold>
+      %span{ class: 'govuk-!-font-weight-bold' }
         = t("offence_category", scope: claim_fields)
       \:
       = claim.offence ? claim.offence.description : t("general.not_provided")

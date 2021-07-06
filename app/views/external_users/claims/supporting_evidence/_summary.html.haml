@@ -32,4 +32,4 @@
     - if local_assigns.has_key?(:editable) && !local_assigns[:editable]
       = render partial: 'external_users/claims/summary/section_status', locals: { claim: claim, section: section, step: :supporting_evidence }
     - else
-      = t('shared.summary.no_values.supporting_evidence')
+      %p= t('shared.summary.no_values.supporting_evidence')

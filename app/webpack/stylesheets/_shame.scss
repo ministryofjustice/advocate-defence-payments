@@ -231,26 +231,6 @@ form {
   }
 }
 
-// TANDCS.SCSS
-.tandcs {
-  .section-title {
-    font-weight: 700;
-  }
-
-  b {
-    font-weight: 700;
-  }
-
-  ul {
-    padding-left: $gutter;
-    list-style-type: disc;
-
-    ul {
-      list-style-type: circle;
-    }
-  }
-}
-
 // claims-table.SCSS
 .totals {
   padding-top: $gutter-two-thirds;
