@@ -1,7 +1,7 @@
 - if claim.certification.present?
   = render partial: 'shared/certification', locals: { claim: claim }
 
-%h3.heading-medium
+%h3.govuk-heading-m
   = "Claim and case type"
 %table.table-summary
   %caption.govuk-visually-hidden
@@ -120,7 +120,7 @@
       = render partial: 'shared/claim_retrial_details', locals: { claim: claim }
 
 - if claim.defendants.any?
-  %h3.heading-medium
+  %h3.govuk-heading-m
     = "Defendants"
   = render partial: 'shared/claim_defendants', locals: {defendants: claim.defendants }
 - else

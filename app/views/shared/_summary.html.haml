@@ -1,6 +1,6 @@
 - present(@claim) do |claim|
   %section#summary
-    %h3.heading-medium
+    %h3.govuk-heading-m
       = t('common.fees')
     - if @claim.fees_total == 0
       %p
@@ -55,7 +55,7 @@
         = t('.fees_total')
         = claim.fees_total
 
-    %h3.heading-medium
+    %h3.govuk-heading-m
       = t('common.expenses')
     - if claim.expenses.empty?
       %p
@@ -120,7 +120,7 @@
         = claim.expenses_total
 
     - if claim.can_have_disbursements?
-      %h3.heading-medium
+      %h3.govuk-heading-m
         = t('common.disbursements')
       - if claim.disbursements.empty?
         %p
@@ -170,7 +170,7 @@
       = claim.total_inc_vat
 
     - if claim.additional_information.present?
-      %h3.heading-medium
+      %h3.govuk-heading-m
         = t('.additional_information')
       %p.indent-sides
         = claim.additional_information

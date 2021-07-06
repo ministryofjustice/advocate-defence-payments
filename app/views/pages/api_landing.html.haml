@@ -2,7 +2,7 @@
 
 .govuk-grid-row
   .govuk-grid-column-two-thirds
-    %h2#overview.heading-medium
+    %h2#overview.govuk-heading-m
       Overview
 
     %p.lede
@@ -13,7 +13,7 @@
     %p
       The API only submits draft claims. The end user then logs on to the "Claim for crown court defence" system to review the claim, upload documentary evidence, and submit the claim to the Legal Aid Agency.
 
-    %h2#release-notes.heading-medium
+    %h2#release-notes.govuk-heading-m
       Release notes
 
     %p
@@ -21,14 +21,14 @@
       = govuk_link_to "publish release notes", api_release_notes_path
       \.
 
-    %h2#documentation.heading-medium
+    %h2#documentation.govuk-heading-m
       Documentation
 
     %p
       The API exposes a number of HTTP endpoints which accept JSON formatted input to create a claim. We’ve provided #{link_to 'detailed interactive documentation', grape_swagger_rails_path}, allowing developers to try out the API from a browser.
 
 
-    %h2#authentication.heading-medium
+    %h2#authentication.govuk-heading-m
       A note on authentication
     %p
       To authenticate a request to any endpoint you will need to provide an API key.  To get an API key, you’ll need to #{link_to "sign up", new_registration_path('user')}.
@@ -44,7 +44,7 @@
           an advocate account's email address for the advocate for whom the claim is being created
 
 
-    %h2#submit-a-claim.heading-medium
+    %h2#submit-a-claim.govuk-heading-m
       Submitting a claim
 
     %ol.list-number
@@ -107,7 +107,7 @@
             fee or expense id required for dates attended
 
 
-    %h2#api-versioning.heading-medium
+    %h2#api-versioning.govuk-heading-m
       API versioning
 
     %p
@@ -122,7 +122,7 @@
       We will always signal non-backwards-compatible versions by changing the first digit of the version number, for example moving from 1.5.8 to 2.0.0.  When this happens, we will run the two versions at the same time and always give 6 months’ notice before we stop supporting an old deprecated version.
 
 
-    %h2#vendor-signup.heading-medium
+    %h2#vendor-signup.govuk-heading-m
       Sign up as a software vendor
 
     %p
@@ -134,7 +134,7 @@
     %p
       = govuk_link_to "Sign up as a software vendor", new_registration_path('user')
 
-    %h2#desktop-app.heading-medium
+    %h2#desktop-app.govuk-heading-m
       Example Desktop Application
 
     %p
@@ -142,7 +142,7 @@
     %p
       We’ll try to keep this application up to date with any changes to the API so it can submit basic claims
 
-    %h2#api-sandbox.heading-medium
+    %h2#api-sandbox.govuk-heading-m
       API Sandbox - Testing Environment
 
     %p

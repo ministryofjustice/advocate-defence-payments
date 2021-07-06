@@ -1,5 +1,5 @@
 #retrial-dates.form-section{ class: @claim&.case_type&.requires_retrial_dates? ? '' : 'hidden', 'aria-labelledby': 'retrial-dates-heading' }
-  %h3#retrial-dates-heading.heading-medium
+  %h3#retrial-dates-heading.govuk-heading-m
     = t('.retrial_detail')
 
   = f.gov_uk_date_field(:retrial_started_at, legend_text: t('.retrial_started_at'), legend_class: 'govuk-legend', form_hint_text: t('.date_hint'), id: "retrial_started_at", error_messages: gov_uk_date_field_error_messages(@error_presenter, :retrial_started_at))
@@ -12,7 +12,7 @@
   .form-group.inline
     %fieldset{"aria-describedby": "radio-control-legend-retrial"}
       %legend#radio-control-legend-retrial.form-label-bold
-        %h3.heading-medium
+        %h3.govuk-heading-m
           = t('.retrial_reduction')
 
       = f.collection_radio_buttons(:retrial_reduction, [['Yes','true'],['No','false']], :last, :first ) do |b|

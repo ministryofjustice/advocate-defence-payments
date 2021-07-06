@@ -495,10 +495,6 @@ form {
 // Ported from v1 stylesheets
 .search-form {
   @include govuk-clearfix;
-
-  .heading-medium {
-    margin-top: 0;
-  }
 }
 
 .js-cw-claim-assessment {

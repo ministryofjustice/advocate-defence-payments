@@ -12,7 +12,7 @@
       %p
         = t('shared.summary.no_values.expenses')
   - else
-    %h2.heading-medium
+    %h2.govuk-heading-m
       = t('shared.summary.cost_summary')
 
     %table.summary
@@ -61,13 +61,13 @@
             = claim.expenses_gross
 
   - if @claim.travel_expense_additional_information.present?
-    %h3.heading-medium
+    %h3.govuk-heading-m
       = t('.additional_information')
     %p
       = @claim.travel_expense_additional_information
 
   - if claim.expenses.empty?.eql?(false)
-    %h3.heading-medium
+    %h3.govuk-heading-m
       = t('shared.summary.expenses.travel_details')
 
     %table.summary

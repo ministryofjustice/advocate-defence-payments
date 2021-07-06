@@ -2,7 +2,7 @@
   %fieldset{ 'aria-describedby': 'radio-control-evidence' }
     = f.anchored_without_label t('shared.claim.prosecution_evidence')
     %legend{ for: 'prosecution_evidence' }
-      %h3#radio-control-evidence.heading-medium
+      %h3#radio-control-evidence.govuk-heading-m
         = t('common.prosecution_evidence')
 
     = f.collection_radio_buttons(:prosecution_evidence, yes_no_options, :last, :first) do |b|

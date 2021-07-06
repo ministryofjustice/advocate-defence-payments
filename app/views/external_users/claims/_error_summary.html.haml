@@ -1,6 +1,6 @@
 - if ep && ep.size > 0
   .error-summary{role: "group", 'aria-labelledby': "error-summary-heading", tabindex:'-1'}
-    %h1.heading-medium.error-summary-heading{id: 'error-summary-heading'}
+    %h1.govuk-heading-m.error-summary-heading{id: 'error-summary-heading'}
       = "#{t('.prohibited_save')} #{pluralize(ep.size, t('.error'))}"
 
     %span.form-hint

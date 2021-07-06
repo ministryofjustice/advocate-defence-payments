@@ -1,7 +1,7 @@
 .form-group
   %fieldset{ 'aria-describedby': 'radio-control-legend-transfer' }
     %legend#radio-control-legend-transfer
-      %h2.heading-medium
+      %h2.govuk-heading-m
         = t('.case_transferred_from_another_court')
 
     = f.collection_radio_buttons(:case_transferred_from_another_court, yes_no_options.reverse, :last, :first ) do |b|

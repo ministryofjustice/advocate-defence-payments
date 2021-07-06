@@ -3,7 +3,7 @@ describe('Modules.AmountAssessedBlock.js', function () {
   const view = [
     '<div class="fx-assesment-hook">',
     '  <div class="js-cw-claim-assessment" id="claim-status" style="display: block;">',
-    '    <h3 class="heading-medium">',
+    '    <h3 class="govuk-heading-m">',
     '      Assessment summary',
     '    </h3>',
     '  </div>',

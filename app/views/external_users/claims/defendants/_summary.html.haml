@@ -18,7 +18,7 @@
     - claim.defendants.order(:created_at).each.with_index(1) do | defendant, index|
 
       - if claim.defendants.count > 1
-        %h3.heading-medium
+        %h3.govuk-heading-m
           = t('.common.defendant_index', index: index)
 
       = govuk_summary_list do

@@ -3,7 +3,7 @@
     - present(f.object.basic_fees, BasicFeesPresenter) do | basic_fees |
 
       .form-section
-        %h3.heading-medium
+        %h3.govuk-heading-m
           = t('.heading')
       = f.fields_for :basic_fees, basic_fees.primary_fee do |basic_fee_fields|
         - @basic_fee_count += 1
@@ -11,7 +11,7 @@
           = render 'external_users/claims/basic_fees/basic_fee_fields_primary', f: basic_fee_fields
 
       .form-section
-        %h3.heading-medium
+        %h3.govuk-heading-m
           = t('.additional_fees')
 
         .form-group

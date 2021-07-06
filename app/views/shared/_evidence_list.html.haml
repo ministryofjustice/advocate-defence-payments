@@ -1,7 +1,7 @@
 = render partial: 'shared/evidence_checklist'
 
 .app-summary-section
-  %h3.heading-medium
+  %h3.govuk-heading-m
     = t('.existing_evidence')
   - if current_user_persona_is?(CaseWorker) && @claim.documents.any?
     = govuk_link_to t('shared.download_all'), download_zip_case_workers_claim_path(@claim), class: 'download-all-link'
