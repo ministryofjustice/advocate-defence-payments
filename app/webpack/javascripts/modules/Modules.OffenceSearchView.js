@@ -15,7 +15,7 @@ moj.Modules.OffenceSearchView = {
   template: function () {
     return ['<div class="govuk-grid-row offence-item fx-result-item">',
       '<div class="govuk-grid-column-two-thirds">',
-      '<span class="font-xsmall link-grey">',
+      '<span class="govuk-body-s link-grey">',
       '<a href="#noop" class="fx-filter" data-category="{{:category.id}}">',
       '{{:category.description}}',
       '</a>&nbsp;&gt;&nbsp;',
@@ -26,7 +26,7 @@ moj.Modules.OffenceSearchView = {
       '</span></br>',
       '{{:description}}',
       '</br>',
-      '<span class="font-xsmall link-grey">{{:contrary}}</a>',
+      '<span class="govuk-body-s link-grey">{{:contrary}}</a>',
       '</div>',
       '<div class="govuk-grid-column-one-third align-right">',
       '</br>',
