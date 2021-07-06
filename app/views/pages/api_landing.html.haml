@@ -37,7 +37,7 @@
       %p
         %strong.bold-small
           The claim endpoint also requires the following:
-      %ul.list-bullet
+      %ul.govuk-list--bullet
         %li
           an advocate account's email address for the provider - to be used as the creator of the claim
         %li
@@ -47,7 +47,7 @@
     %h2#submit-a-claim.govuk-heading-m
       Submitting a claim
 
-    %ol.list-number
+    %ol.govuk-list.govuk-list--number
       %li
         Perform a GET operation to retrieve the current set of various object types from their respective endpoints.
 
@@ -55,7 +55,7 @@
           %p
             %strong.bold-small
               These GET endpoints are:
-          %ul.list-bullet
+          %ul.govuk-list.govuk-list--bullet
             %li
               case types
             %li
@@ -98,7 +98,7 @@
       %p
         %strong.bold-small
           To summarise:
-        %ul.list-bullet
+        %ul.govuk-list.govuk-list--bullet
           %li
             claim id required for defendants, fees, expenses
           %li
@@ -160,7 +160,7 @@
             = "Table of contents"
 
           %nav{ role: 'navigation', 'aria-labelledby': 'parent-subsection' }
-            %ul
+            %ul.govuk-list.govuk-list--spaced
               %li
                 = govuk_link_to 'Overview', '#overview'
 

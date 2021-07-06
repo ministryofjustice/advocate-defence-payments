@@ -100,7 +100,7 @@
               = expense.reason
             %td
               - if expense.location.present? || expense.distance.present? || expense.mileage_rate.present?
-                %ul
+                %ul.govuk-list
                   - if expense.location.present?
                     %li
                       = t('shared.summary.destination_html', location: expense.location)

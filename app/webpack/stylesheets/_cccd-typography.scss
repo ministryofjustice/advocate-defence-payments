@@ -127,19 +127,6 @@ p {
   }
 }
 
-.timed-retention-states {
-  padding-left: $gutter-two-thirds;
-
-  li {
-    line-height: 30px;
-    list-style: disc inside;
-
-    &:last-child {
-      margin-bottom: $gutter;
-    }
-  }
-}
-
 .json-schema {
   font-family: "Courier New", monospace;
   font-size: 80%;

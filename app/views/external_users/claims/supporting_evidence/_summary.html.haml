@@ -11,7 +11,7 @@
       = govuk_summary_list_row( t('shared.summary.disk_evidence_reference') ) { claim.disk_evidence_reference }
 
       = govuk_summary_list_row( t('shared.summary.supporting_evidence') ) do
-        %ul
+        %ul.govuk-list
           - claim.documents.each do |document|
             %li
               = govuk_link_to document.document_file_name,
@@ -20,7 +20,7 @@
                         'aria-label': "Download document: #{document.document_file_name}"
 
       = govuk_summary_list_row( t('shared.summary.supporting_evidence_checklist') ) do
-        %ul
+        %ul.govuk-list
           - DocType.find_by_ids(claim.evidence_checklist_ids).each do |dt|
             %li
               = dt.name

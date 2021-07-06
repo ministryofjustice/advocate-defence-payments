@@ -7,7 +7,7 @@
     %p
       = t('external_users.claims.check_your_claim.missing_information.section_help_text', section: t("external_users.claims.#{section}.summary.header"))
 
-    %ul.list.list-bullet
+    %ul.govuk-list.govuk-list--bullet
       - claim.summary_sections.each do |section, associated_step|
         - if missing_dependencies.include?(associated_step)
           %li

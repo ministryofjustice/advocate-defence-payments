@@ -866,7 +866,7 @@ en:
             title: Help with basic fees
             pre_agfs_reform_html:
               <p>Basic fees include:</p>
-              <ul class="list list-bullet">
+              <ul class="govuk-list govuk-list--bullet">
               <li>2 daily attendance fees</li>
               <li>4 standard appearance fees</li>
               <li>1 plea and trial preparation hearing (<abbr title= "plea and trial preparation hearing">PTPH</abbr>)</li>
@@ -874,7 +874,7 @@ en:
               </ul>
             post_agfs_reform_html:
               <p>Basic fees include:</p>
-              <ul class="list list-bullet">
+              <ul class="govuk-list govuk-list--bullet">
               <li>1 daily attendance fee</li>
               </ul>
             how_is_this_rate_calculated_html:
@@ -1025,7 +1025,7 @@ en:
           retrial_reduction_help_link: 'Help with claiming a reduced rate'
           retrial_reduction_help_html: |
               A reduced rate can be requested if: <br/>
-              <ul class="list list-bullet">
+              <ul class="govuk-list govuk-list--bullet">
                 <li>you represented the defendant(s) at the original trial</li>
                 <li>you don’t want the reduced rate to be applied to the original trial</li>
               </ul>

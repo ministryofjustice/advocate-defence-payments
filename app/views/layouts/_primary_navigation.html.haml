@@ -12,7 +12,7 @@
 
       - else
         %nav.breadcrumbs{ 'aria-label': t('.sub_navigation') }
-          %ul
+          %ul.govuk-list
             - if current_user.persona.is_a?(SuperAdmin)
               %li
                 = govuk_link_to t('.sidekiq_console'), sidekiq_web_path

@@ -23,7 +23,7 @@
       %p
         = t('external_users.claims.check_your_claim.missing_information.help_text')
 
-      %ul.list.list-bullet
+      %ul.govuk-list.govuk-list--bullet
         - claim.summary_sections.each do |section, associated_step|
           - if claim.invalid_steps.include?(associated_step)
             %li

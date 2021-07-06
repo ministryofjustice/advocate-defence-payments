@@ -14,7 +14,7 @@
     %p
       = t('.no_evidence')
   - else
-    %ul
+    %ul.govuk-list
       - DocType.find_by_ids(@claim.evidence_checklist_ids).each do |dt|
         %li
           = dt.name
