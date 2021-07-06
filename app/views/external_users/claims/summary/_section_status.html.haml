@@ -2,7 +2,7 @@
 
 - unless missing_dependencies.empty?
   = govuk_inset_text do
-    %h3.heading-small
+    %h3.govuk-heading-s
       = t('external_users.claims.check_your_claim.missing_information.header')
     %p
       = t('external_users.claims.check_your_claim.missing_information.section_help_text', section: t("external_users.claims.#{section}.summary.header"))
