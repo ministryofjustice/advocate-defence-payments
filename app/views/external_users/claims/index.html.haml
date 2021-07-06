@@ -8,7 +8,7 @@
 .govuk-grid-row
   = render partial: 'financial_summary', locals: { financial_summary: @financial_summary }
   .govuk-grid-column-one-third
-    %p.heading-large
+    %p.govuk-heading-l
       = govuk_button_start(t('link.add_claim'), new_external_users_claim_types_path)
 
 

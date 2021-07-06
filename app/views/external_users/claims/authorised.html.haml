@@ -3,7 +3,7 @@
 
 = render partial: 'layouts/header', locals: {page_heading: t('.page_heading')}
 
-%h2.heading-large
+%h2.govuk-heading-l
   %span.heading-secondary
     = "#{@claims.unscope(:order).size} of #{@claims.total_count}"
     = t('.with_total_assessed_value_of')

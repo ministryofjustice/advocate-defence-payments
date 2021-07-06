@@ -6,7 +6,7 @@
 - @available_report_types.each do |report_type, report|
   - report_name = t(".report_types.#{report_type}")
   .form-section
-    %h2.heading-large{ id: "heading-#{report_type}" }
+    %h2.govuk-heading-l{ id: "heading-#{report_type}" }
       = report_name
     %p{ role: 'group', 'aria-labelledby': "heading-#{report_type}" }
       - if report&.started_at
@@ -20,7 +20,7 @@
       = govuk_link_button(t('.regenerate'), case_workers_admin_management_information_generate_url(report_type: report_type))
 
 #provisional-assessment-date.form-section.fx-dates-chooser
-  %h2.heading-large
+  %h2.govuk-heading-l
     = t('.provisional_assessments_by_date')
 
   = form_with builder: GOVUKDesignSystemFormBuilder::FormBuilder do |f|
