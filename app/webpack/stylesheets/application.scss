@@ -11,9 +11,7 @@ $govuk-font-url-function: frontend-font-url;
 
 // GOV.UK Frontend Toolkit (alphagov/govuk_frontend_toolkit)
 @import '~govuk_frontend_toolkit/stylesheets/colours';
-@import '~govuk_frontend_toolkit/stylesheets/font_stack';
 @import '~govuk_frontend_toolkit/stylesheets/measurements';
-@import '~govuk_frontend_toolkit/stylesheets/typography';
 @import '~govuk_frontend_toolkit/stylesheets/shims';
 
 @import '~govuk_frontend_toolkit/stylesheets/design-patterns/alpha-beta';
@@ -25,7 +23,6 @@ $govuk-font-url-function: frontend-font-url;
 @import '~govuk-elements-sass/public/sass/elements/reset';
 
 // Components (chunks of UI)
-@import '~govuk-elements-sass/public/sass/elements/elements-typography';
 @import '~govuk-elements-sass/public/sass/elements/buttons';
 @import '~govuk-elements-sass/public/sass/elements/icons';
 @import '~govuk-elements-sass/public/sass/elements/lists';
