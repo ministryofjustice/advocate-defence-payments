@@ -321,7 +321,7 @@ form {
   justify-content: center;
 
   label {
-    @include core-19;
+    @include govuk-font(19);
     position: absolute;
     left: -9999em;
   }
@@ -397,7 +397,7 @@ form {
 }
 
 .error .error-message {
-  @include core-16;
+  @include govuk-font(16);
 }
 
 .form-date p {

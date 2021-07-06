@@ -147,7 +147,7 @@
     }
 
     .message-audit {
-      @include bold-16;
+      @include govuk-font(16, $weight: bold);
       color: $page-colour;
       text-align: left;
 

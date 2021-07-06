@@ -12,7 +12,7 @@ table {
   background-color: $white;
 
   caption {
-    @include core-19;
+    @include govuk-font(19);
     padding-bottom: $gutter-half / 2;
     font-weight: 700;
     text-align: left;
@@ -105,7 +105,7 @@ table {
     }
 
     th {
-      @include core-16;
+      @include govuk-font(16);
       color: $text-colour;
       background: transparent;
       font-weight: 700;
@@ -180,7 +180,7 @@ table {
 
 .report {
   td {
-    @include core-16;
+    @include govuk-font(16);
   }
 
   .select {
@@ -331,7 +331,7 @@ table {
     }
 
     th {
-      @include core-19;
+      @include govuk-font(19);
       color: $text-colour;
       background: transparent;
       font-weight: 700;
@@ -343,14 +343,14 @@ table {
     }
 
     td {
-      @include core-19;
+      @include govuk-font(19);
     }
   }
 
   tfoot {
     th,
     td {
-      @include core-19;
+      @include govuk-font(19);
       font-weight: 700;
     }
   }

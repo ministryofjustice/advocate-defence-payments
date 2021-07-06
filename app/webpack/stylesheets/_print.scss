@@ -41,7 +41,7 @@
 
   .single-date {
     legend {
-      @include core-24;
+      @include govuk-font(24);
       display: inline-block;
       position: relative;
       width: auto;

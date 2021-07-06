@@ -4,17 +4,17 @@ p {
 }
 
 .bold-xsmall {
-  @include bold-14;
+  @include govuk-font(14, $weight: bold);
 }
 
 .bold-normal {
-  @include bold-16;
+  @include govuk-font(16, $weight: bold);
 }
 
 .unique-id-small {
+  @include govuk-font(14);
   display: block;
   color: $black;
-  font-size: 12px;
 }
 
 .sub-header {
@@ -23,14 +23,13 @@ p {
 
 .hgroup {
   h2 {
-    @include core-24;
+    @include govuk-font(24);
     margin: 0;
     color: $grey-1;
-    font-weight: 400;
   }
 
   .numerical-value {
-    @include bold-36;
+    @include govuk-font(36, $weight: bold);
     display: block;
     color: $text-colour;
   }
@@ -46,7 +45,7 @@ p {
       margin-bottom: 0;
     }
 
-    @include core-19;
+    @include govuk-font(19);
 
     .button {
       margin-right: $gutter-one-sixth;
@@ -66,7 +65,7 @@ p {
 
 .new-claim-content {
   h2 {
-    @include core-24;
+    @include govuk-font(24, $weight: bold);
     margin-top: $gutter;
     font-weight: 800;
   }
@@ -85,14 +84,13 @@ p {
   border-top: 5px solid $link-colour;
 
   h2 {
-    @include core-24;
+    @include govuk-font(24, $weight: bold);
     margin-top: $gutter-half;
     font-weight: 800;
   }
 
   h3 {
-    @include core-19;
-    font-weight: 800;
+    @include govuk-font(19, $weight: bold);
   }
 
   .numeric {

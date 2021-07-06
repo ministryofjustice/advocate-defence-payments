@@ -14,14 +14,14 @@
 }
 
 .related h2 {
-  @include heading-24;
+  @include govuk-font(24);
   margin-top: $gutter-one-sixth;
   margin-bottom: $gutter-one-sixth;
   font-weight: 700;
 }
 
 .related ul {
-  @include core-16;
+  @include govuk-font(16);
   overflow: hidden;
   list-style: none;
 }
@@ -56,7 +56,7 @@
 }
 
 .related .return-to-top {
-  @include core-16;
+  @include govuk-font(16);
 
   @include govuk-media-query($from: tablet) {
     position: absolute;
