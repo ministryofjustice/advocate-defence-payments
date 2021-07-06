@@ -1,7 +1,7 @@
 .claim-hgroup
   .govuk-grid-row{ class: 'govuk-!-margin-bottom-3' }
     .govuk-grid-column-one-third
-      %h1
+      %h1.govuk-heading-l
         = t('.case_number')
         %span.case-number-header
           = claim.formatted_case_number
@@ -14,21 +14,21 @@
             = govuk_tag claim.state.humanize, class: "app-tag--#{claim.state}"
 
     .govuk-grid-column-one-third
-      %h2
+      %h2.govuk-heading-m
         = t('.assessment_date')
         %span.case-number-header
           = claim.assessment_date
 
   .govuk-grid-row{ class: 'govuk-!-margin-bottom-3' }
     .govuk-grid-column-one-third
-      %h2
+      %h2.govuk-heading-m
         = t('.defendant_names')
         %span.case-number-header
           = claim.defendant_name_and_initial
         %span
           = claim.other_defendant_summary
     .govuk-grid-column-one-third
-      %h2
+      %h2.govuk-heading-m
         = t('.provider_type')
         %span.case-number-header
           = claim.provider.name
