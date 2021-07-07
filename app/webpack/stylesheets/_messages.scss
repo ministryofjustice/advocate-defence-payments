@@ -101,6 +101,7 @@
 
           p {
             margin-bottom: 0;
+            color: $govuk-text-colour;
           }
         }
       }
@@ -176,6 +177,10 @@
           height: 1.5em;
           border-left: 1em solid $link-colour;
           border-bottom-left-radius: 1.75em 1.5em;
+        }
+
+        p {
+          color: govuk-colour('white');
         }
 
         a {
