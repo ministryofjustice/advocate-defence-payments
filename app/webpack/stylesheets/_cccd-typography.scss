@@ -21,20 +21,6 @@ p {
   margin-bottom: $gutter-half;
 }
 
-.hgroup {
-  h2 {
-    @include govuk-font(24);
-    margin: 0;
-    color: $grey-1;
-  }
-
-  .numerical-value {
-    @include govuk-font(36, $weight: bold);
-    display: block;
-    color: $text-colour;
-  }
-}
-
 .claim-hgroup {
   margin-bottom: $gutter-one-third;
 

@@ -3,13 +3,10 @@
 
 = render partial: 'layouts/header', locals: {page_heading: t('.page_heading')}
 
-
-%h2.govuk-heading-l
-  %span.heading-secondary
-    = "#{@claims.unscope(:order).size} of #{@claims.total_count}"
-    = t('.claims_value')
-  %span.numerical-value
-    = number_to_currency(@total_value)
+%p.govuk-heading-l
+  %span.govuk-caption-l
+    = t('.claims_value_html', size: @claims.unscope(:order).size, total: @claims.total_count)
+  = number_to_currency(@total_value)
 
 #details#listanchor
   = render partial: 'main_claims_list', locals: { claims: @claims }

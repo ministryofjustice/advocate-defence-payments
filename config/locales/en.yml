@@ -840,7 +840,7 @@ en:
         page_title: View your claims archive
       authorised:
         page_heading: Your authorised claims
-        with_total_assessed_value_of: 'claims with a total assessed value of'
+        with_total_assessed_value_of_html: '%{size} of %{total} claims with a total assessed value of'
         page_title: View your authorised claims
       basic_fees:
         dates_attended:
@@ -1479,7 +1479,7 @@ en:
           summary: 'Note: To best navigate this table, select the right hand column and then step down through the rows.'
       outstanding:
         page_heading: Your outstanding claims
-        claims_value: claims with a total value of
+        claims_value_html: '%{size} of %{total} claims with a total value of'
         page_title: View your outstanding claims
       supporting_documents:
         disk_evidence:
