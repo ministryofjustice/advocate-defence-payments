@@ -72,6 +72,8 @@ $govuk-font-url-function: frontend-font-url;
 @import 'print';
 
 @import 'cocoon';
+
+@import 'components/code';
 @import 'components/tag';
 @import 'components/notification_banner';
 

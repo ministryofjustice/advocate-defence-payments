@@ -24,9 +24,9 @@
       %br/
       %br/
       The endpoints are functionally identical, so you will just need to POST to the new endpoint or its
-      %code.code='../validate'
+      %code.app-code='../validate'
       equivalent (if used). The change is for code organization and logical namespacing considerations following the addition of multiple other advocate endpoints. This will ensure all advocate endpoints are under
-      %code.code='api/external_users/claims/advocates/[final|interim|supplementary|hardship]'
+      %code.app-code='api/external_users/claims/advocates/[final|interim|supplementary|hardship]'
       \.
       %br/
 
@@ -163,7 +163,7 @@
       You can query the new offences on the
       %a{ href: '/api/documentation?v=1#!/api/getApiOffences', target: '_blank' } api/offences
       endpoint - note that you will need to provide a
-      %code.code='rep_order_date'
+      %code.app-code='rep_order_date'
       parameter that falls on or after the AGFS fee scheme 12 start date - 2020-09-17
 
 
@@ -284,7 +284,7 @@
   %ul.govuk-list.govuk-list--bullet
     %li
       Expose offence
-      %code.code='unique_code'
+      %code.app-code='unique_code'
       and optional filter on the
       %a{ href: '/api/documentation?v=1#!/api/getApiOffences', target: '_blank' } api/offences
       endpoint
@@ -292,27 +292,27 @@
       %br/
       To facilitate the lookup of offences the unique identifiers that
       can be relied on not to change (i.e.
-      %code.code='unique_code'
+      %code.app-code='unique_code'
       ) have been exposed.
       %br
       %br
       = govuk_inset_text do
         Note that an offence's
-        %code.code='id'
+        %code.app-code='id'
         should not be persisted in consumers and relied on to add a specific offence to a claim.
         The reason for this is that internal id's could change unexpectedly. We will, however,
         endeavour to not change these for historical reasons. Instead an offence should be queried
         on this endpoint using the
-        %code.code='unique_code'
+        %code.app-code='unique_code'
         identifier (or description, but this too is not ideal) to retrieve its id.
         %br/
         %br/
         An
-        %code.code='id'
+        %code.app-code='id'
         retrieved by these means can be used to reliably create a claim with that offence.
 
       In addition a
-      %code.code='unique_code'
+      %code.app-code='unique_code'
       filter has been added to enable consumers to retrieve a single offence's data.
       %br/
       %br/
@@ -337,7 +337,7 @@
       You can query all offences on the
       %a{ href: '/api/documentation?v=1#!/api/getApiOffences', target: '_blank' } api/offences
       endpoint - note that you will need to provide a
-      %code.code='rep_order_date'
+      %code.app-code='rep_order_date'
       parameter that falls within the scheme 10/11 scheme start and end date - start dates are 2018-04-01 and 2018-12-31 respectively
 
 %section.api-documentation
@@ -357,9 +357,9 @@
       %br/
       %br/
       The endpoints are functionally identical, so you will just need to POST to the new endpoint or its
-      %code.code='../validate'
+      %code.app-code='../validate'
       equivalent (if used). The change is for code organization and logical namespacing considerations following the addition of multiple other advocate endpoints. This will ensure all advocate endpoints are under
-      %code.code='api/external_users/claims/advocates/[final|interim|supplementary]'
+      %code.app-code='api/external_users/claims/advocates/[final|interim|supplementary]'
       \.
       %br/
       %br/
@@ -369,7 +369,7 @@
       %br/
       %br/
       Responses from any deprecated endpoint will include a
-      %code.code='Sunset'
+      %code.app-code='Sunset'
       HEADER with a value of the http formatted date of the intended End of Life date. There will also be a related link in the header to point to the release notes. We will be providing 6 months grace period on deprecations so the old endpoint will be
       %em='removed on or after 30/08/2019 (this has been moved to 31/01/2020 due to poor uptake)'
       \.
@@ -460,9 +460,9 @@
       %br/
     %li
       Addition of a
-      %code.code='unique_code'
+      %code.app-code='unique_code'
       filter option to
-      %code.code='api/fee_types'
+      %code.app-code='api/fee_types'
       endpoint
       %br/
       %br/
@@ -493,7 +493,7 @@
       %br/
       The following fee type should only be used for LGFS final claim fixed fee
       cases:
-      %pre.code
+      %pre.app-code
         {
         &nbsp;"id": 90,
         &nbsp;"type": "Fee::MiscFeeType",
@@ -510,7 +510,7 @@
         }
       %br/
       You can get the whole list of LGFS miscellaneous fee types using this query:
-      %pre.code
+      %pre.app-code
         curl -X GET --header 'Accept: application/json' &&
         'https://api-sandbox.claim-crown-court-defence.service.justice.gov.uk/api/fee_types?api_key=[your-api-key]&role=lgfs&category=misc'
       %br/
@@ -538,7 +538,7 @@
       %br/
       %br/
       An additional field,
-      %code.code
+      %code.app-code
         travel_expense_additional_information
       , has been added to all of the claim endpoints in the
       API.  It is currently optional, but at a future date we will start to enforce validation in line with the web
@@ -548,13 +548,13 @@
       The validation rule that will come into effect on the API in the future is:
       %br/
       If any of the travel expenses have their
-      %code.code
+      %code.app-code
         mileage_rate_id
       values set to
-      %code.code
+      %code.app-code
         2
       then the associated claim must have been created with
-      %code.code
+      %code.app-code
         travel_expense_additional_information
       set
 
@@ -568,28 +568,28 @@
       %br/
       The CCCD web interface has been amended to calculate LGFS fixed fees. As part of this work the interface
       has (re)introduced the
-      %code.code
+      %code.app-code
         quantity
       and
-      %code.code
+      %code.app-code
         rate
       attributes for all
-      %code.code
+      %code.app-code
         LGFS Fee::FixedFeeType
       fee objects. The
-      %code.code
+      %code.app-code
         amount
       attribute will be calculated on a simple quantity x rate basis.
       %br/
       %br/
       The interface will populate the
-      %code.code
+      %code.app-code
         rate
       attribute by querying the
       %a{:href => 'https://github.com/ministryofjustice/laa-fee-calculator', target: '_blank'}
         LAA fee calculation API
       \. The
-      %code.code
+      %code.app-code
         quantity
       is required.
       %br/
@@ -600,7 +600,7 @@
       %br/
       For example:
       %br/
-      %pre.code
+      %pre.app-code
         {
         &nbsp;api_key: you-provider-api-key,
         &nbsp;claim_id: claim-uuid,
@@ -611,7 +611,7 @@
       %br/
       will result in a fixed fee with the following attributes:
       %br/
-      %pre.code
+      %pre.app-code
         {
         &ensp;claim_id: claim-uuid,
         &ensp;fee_type_id: fixed-fee-type-id,
@@ -630,19 +630,19 @@
   %ul.govuk-list.govuk-list--bullet
     %li
       The miscellaneous fee type "Adjourned appeals" has been repurposed as a fixed fee type. The
-      %code.code
+      %code.app-code
         id
       remains the same but the
-      %code.code
+      %code.app-code
         type
       ,
-      %code.code
+      %code.app-code
         unique_code
       and
-      %code.code
+      %code.app-code
         code
       and
-      %code.code
+      %code.app-code
         description
       have been modified as below.
 
@@ -844,49 +844,49 @@
   %ul.govuk-list.govuk-list--bullet
     %li
       The endpoints for
-      %code.code
+      %code.app-code
         \/api/fee_types
       and
-      %code.code
+      %code.app-code
         \/api/advocate_categories
       have been updated.
       %br/
       %br/
       The
-      %code.code
+      %code.app-code
         role
       options have been updated on
-      %code.code
+      %code.app-code
         \/api/fee_types
       and added to
-      %code.code
+      %code.app-code
         \/api/advocate_categories
       you can now send
-      %code.code
+      %code.app-code
         agfs
       ,
-      %code.code
+      %code.app-code
         agfs_scheme_9
       ,
-      %code.code
+      %code.app-code
         agfs_scheme_10
       or
-      %code.code
+      %code.app-code
         lgfs
       to get the appropriate returns.
       %br/
       %br/
       Sending
-      %code.code
+      %code.app-code
         agfs
       will return the
-      %code.code
+      %code.app-code
         agfs_scheme_9
       values.
       %br/
       %br/
       Sending no
-      %code.code
+      %code.app-code
         role
       filter to either will return all data, regardless of fee scheme.
   %hr.govuk-section-break.govuk-section-break--l.govuk-section-break--visible
@@ -897,7 +897,7 @@
       %br/
       %br/
       This release changes the LGFS only miscellaneous fee type "Case uplift" with a unique code of
-      %code.code
+      %code.app-code
         MIUPL
       to be a Defendant uplift. This means the fee no longer requires case numbers to be supplied.
       %br/
@@ -910,7 +910,7 @@
   %ul.govuk-list.govuk-list--bullet
     %li
       A new claim type was introduced as part of the AGFS fee scheme changes on 1st April 2018. This has been implemented on the API as
-      %code.code
+      %code.app-code
         \/api/external_users/claims/advocates/interim
       and enables a submission of a warrant fee.
       Please see the
@@ -919,13 +919,13 @@
       %br/
       %br/
       This has a reduced set of fields as the claim will never require a case type value or trial dates.  We have also taken the opportunity to remove the deprecated
-      %code.code
+      %code.app-code
         advocate_email
       field.
       %br/
       %br/
       There is the usual
-      %code.code
+      %code.app-code
         \/api/external_users/claims/advocates/interim/validate
       endpoint to test your submissions against.  This will return any validation errors that will prevent the record being created on the creation endpoint.
 
@@ -937,10 +937,10 @@
       %br/
       %br/
       This release adds the new 1244 AGFS offences to the existing offences list, but starting from 1000.  Therefore the
-      %code.code
+      %code.app-code
         \/api/external_users/offences
       endpoint has an additional, optional, parameter;
-      %code.code
+      %code.app-code
         rep_order_date
       ='.'
       %br/
@@ -963,10 +963,10 @@
       %br/
       %br/
       From now on submitting data to the
-      %code.code
+      %code.app-code
         \/api/external_users/fee
       endpoint with either of the following states will result in a
-      %code.code
+      %code.app-code
         Evidence provision fee can only be £45 or £90
       error.
       %br/
@@ -995,12 +995,12 @@
   %ul.govuk-list.govuk-list--bullet
     %li
       The Fee type GET endpoint
-      %code.code
+      %code.app-code
         \/api/fee_types
       will return an additional boolean attribute
       %br/
       %br/
-      %code.code
+      %code.app-code
         "case_numbers_required": [true|false]
       %br/
       %br
@@ -1012,22 +1012,22 @@
       %br/
       %br/
       The posting of data to the
-      %code.code
+      %code.app-code
         \/api/external_users/fee
       endpoint should include a matching number of comma delimited case numbers for certain fee types.
       %br/
       %br/
       For example, if the
-      %code.code
+      %code.app-code
         fee_type_unique_code
       is set to
-      %code.code
+      %code.app-code
         BANOC
       and the quantity to 2 then the
-      %code.code
+      %code.app-code
         case_numbers
       value should contain two valid case numbers, such as
-      %code.code
+      %code.app-code
         T20170001,T20170002
       \.
       %br/
@@ -1139,10 +1139,10 @@
                 %br/
                 %br/
                 ** You can determine these fee types from the
-                %code.code
+                %code.app-code
                   api/fee_types
                 endpoint using the
-                %code.code
+                %code.app-code
                   case_numbers_required
                 boolean attribute
       %p
