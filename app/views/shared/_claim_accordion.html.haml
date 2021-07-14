@@ -1,7 +1,7 @@
 #claim-accordion
   .govuk-grid-row
     .govuk-grid-column-one-half
-      %h2.heading-medium
+      %h2.govuk-heading-m
         = t('.h2_messages')
 
     .govuk-grid-column-one-half
@@ -16,17 +16,17 @@
   = render partial: 'shared/claim_history', locals: { claim: claim }
   = render partial: 'shared/claim_status', locals: { claim: claim, disabled: status_disabled }
 
-  %h2.heading-medium
+  %h2.govuk-heading-m
     = t('.h2_basic_info')
   .js-accordion__panel
     = render partial: 'shared/claim', locals: { claim: claim, hide_totals: true }
 
-  %h2.heading-medium
+  %h2.govuk-heading-m
     = t('.h2_evidence')
   .js-accordion__panel
     = render partial: 'shared/evidence_list'
 
-  %h2.heading-medium
+  %h2.govuk-heading-m
     = t('.h2_summary')
   .js-accordion__panel.fees-summary
     - if claim.agfs?
@@ -35,7 +35,7 @@
       = render partial: 'shared/summary_lgfs', locals: { claim: claim }
 
   - if claim.additional_information.present?
-    %h2.heading-medium
+    %h2.govuk-heading-m
       = t('.additional_information')
     %p
       = claim.additional_information

@@ -231,26 +231,6 @@ form {
   }
 }
 
-// TANDCS.SCSS
-.tandcs {
-  .section-title {
-    font-weight: 700;
-  }
-
-  b {
-    font-weight: 700;
-  }
-
-  ul {
-    padding-left: $gutter;
-    list-style-type: disc;
-
-    ul {
-      list-style-type: circle;
-    }
-  }
-}
-
 // claims-table.SCSS
 .totals {
   padding-top: $gutter-two-thirds;
@@ -341,7 +321,7 @@ form {
   justify-content: center;
 
   label {
-    @include core-19;
+    @include govuk-font(19);
     position: absolute;
     left: -9999em;
   }
@@ -417,7 +397,7 @@ form {
 }
 
 .error .error-message {
-  @include core-16;
+  @include govuk-font(16);
 }
 
 .form-date p {
@@ -495,10 +475,6 @@ form {
 // Ported from v1 stylesheets
 .search-form {
   @include govuk-clearfix;
-
-  .heading-medium {
-    margin-top: 0;
-  }
 }
 
 .js-cw-claim-assessment {

@@ -1,7 +1,7 @@
 .form-group{ class: error_class?(@error_presenter, :disk_evidence) }
   %fieldset{ 'aria-describedby': 'radio-control-legend-evidence' }
     %legend#radio-control-legend-evidence
-      %span.heading-medium
+      %span.govuk-heading-m
         = t('disk_evidence.question')
 
     = f.collection_radio_buttons(:disk_evidence, [['Yes','true'],['No','false']], :last, :first ) do |b|

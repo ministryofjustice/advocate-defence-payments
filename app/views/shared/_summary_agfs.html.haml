@@ -1,7 +1,7 @@
 -# AGFS fees accordion content
 - present(@claim) do |claim|
   %section#summary
-    %h3.heading-medium
+    %h3.govuk-heading-m
       = t('common.fees')
     - if @claim.fees_total == 0
       %p
@@ -101,7 +101,7 @@
     - if claim.final? && claim.interim_claim_info.present?
       - present(claim.interim_claim_info) do |info|
         - if info.warrant_fee_paid?
-          %h3.heading-medium
+          %h3.govuk-heading-m
             = t('common.interim_claim_info')
           %table.table-summary
             %caption.hidden
@@ -119,7 +119,7 @@
                   = info.warrant_executed_date
 
     - if claim.expenses.empty?
-      %h3.heading-medium
+      %h3.govuk-heading-m
         = t('common.expenses')
       %p
         = t('shared.summary.no_values.expenses')

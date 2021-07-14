@@ -1,67 +1,28 @@
-// Typography Settings
+main,
+p {
+  @extend %govuk-body-m;
+}
+
 .bold-xsmall {
-  @include bold-14;
+  @include govuk-font(14, $weight: bold);
 }
 
 .bold-normal {
-  @include bold-16;
+  @include govuk-font(16, $weight: bold);
 }
 
 .unique-id-small {
+  @include govuk-font(14);
   display: block;
   color: $black;
-  font-size: 12px;
-}
-
-.case-number-header .unique-id-small {
-  display: inline-block;
 }
 
 .sub-header {
   margin-bottom: $gutter-half;
 }
 
-.hgroup {
-  h2 {
-    @include core-24;
-    margin: 0;
-    color: $grey-1;
-    font-weight: 400;
-  }
-
-  .numerical-value {
-    @include bold-36;
-    display: block;
-    color: $text-colour;
-  }
-}
-
 .claim-hgroup {
   margin-bottom: $gutter-one-third;
-
-  h1 {
-    @include core-19;
-    display: inline-block;
-    margin-left: 0;
-    padding-top: 0;
-  }
-
-  .case-number-header {
-    @include core-36;
-    display: block;
-    font-weight: 700;
-    word-wrap: break-word;
-    word-break: break-word;
-    hyphens: auto;
-    overflow-wrap: break-word;
-  }
-
-  .claim-status {
-    @include core-19;
-    display: block;
-    margin-bottom: $gutter-one-third;
-    float: none;
-  }
 
   .claim-detail-actions {
     margin-bottom: $gutter-one-third;
@@ -70,7 +31,7 @@
       margin-bottom: 0;
     }
 
-    @include core-19;
+    @include govuk-font(19);
 
     .button {
       margin-right: $gutter-one-sixth;
@@ -90,7 +51,7 @@
 
 .new-claim-content {
   h2 {
-    @include core-24;
+    @include govuk-font(24, $weight: bold);
     margin-top: $gutter;
     font-weight: 800;
   }
@@ -109,14 +70,13 @@
   border-top: 5px solid $link-colour;
 
   h2 {
-    @include core-24;
+    @include govuk-font(24, $weight: bold);
     margin-top: $gutter-half;
     font-weight: 800;
   }
 
   h3 {
-    @include core-19;
-    font-weight: 800;
+    @include govuk-font(19, $weight: bold);
   }
 
   .numeric {
@@ -151,19 +111,6 @@
   }
 }
 
-.timed-retention-states {
-  padding-left: $gutter-two-thirds;
-
-  li {
-    line-height: 30px;
-    list-style: disc inside;
-
-    &:last-child {
-      margin-bottom: $gutter;
-    }
-  }
-}
-
 .json-schema {
   font-family: "Courier New", monospace;
   font-size: 80%;
@@ -172,8 +119,4 @@
 .file-upload-name {
   margin: $gutter-one-sixth 0 0;
   font-style: italic;
-}
-
-.heading-medium {
-  margin-top: 0;
 }

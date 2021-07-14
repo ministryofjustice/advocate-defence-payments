@@ -1,6 +1,6 @@
 - if ep.errors.any?
   .error-summary{ role: 'group', 'aria-labelledby': 'error-summary-heading', tabindex:'-1' }
-    %h2.heading-medium.error-summary-heading{id: 'error-summary-heading'}
+    %h2.govuk-heading-m.error-summary-heading{id: 'error-summary-heading'}
       = error_summary
       = pluralize(ep.errors.count , t('shared.errors.error'))
 

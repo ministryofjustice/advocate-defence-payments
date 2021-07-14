@@ -2,7 +2,7 @@
 
   %fieldset
     %legend
-      %span.heading-medium
+      %span.govuk-heading-m
         = t('.misc_fee')
         %span.fx-numberedList-number
 
@@ -39,4 +39,4 @@
                       errors: @error_presenter,
                       value: number_with_precision(f.object.amount, precision: 2)
 
-  %hr/
+  %hr.govuk-section-break.govuk-section-break--l.govuk-section-break--visible

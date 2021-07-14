@@ -5,7 +5,7 @@
 
   %fieldset
     %legend
-      %span.heading-medium
+      %span.govuk-heading-m
         = t('.misc_fee')
         %span.fx-numberedList-number
 
@@ -71,4 +71,4 @@
 
       = link_to_add_association t('.add_date_attended'), f, :dates_attended, class: '', partial: 'date_attended_fields', data: { 'association-insertion-method': 'append', 'association-insertion-node': 'div', 'association-insertion-traversal': 'prev' }
 
-  %hr/
+  %hr.govuk-section-break.govuk-section-break--l.govuk-section-break--visible

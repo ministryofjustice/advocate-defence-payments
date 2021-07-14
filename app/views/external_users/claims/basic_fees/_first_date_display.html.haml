@@ -1,13 +1,15 @@
 - if fee.claim.case_type.name.downcase.eql?('trial')
   .form-group
-    %span.bold
-      = t('.first_day_of_trial')
     %p
+      %span{ class: 'govuk-!-font-weight-bold' }
+        = t('.first_day_of_trial')
+      %br
       = fee.first_day_of_trial
 
 - elsif fee.claim.case_type.name.downcase.eql?('retrial')
   .form-group
-    %span.bold
-      = t('.retrial_started_at')
     %p
+      %span{ class: 'govuk-!-font-weight-bold' }
+        = t('.retrial_started_at')
+      %br
       = fee.retrial_started_at

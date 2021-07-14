@@ -1,5 +1,5 @@
 %nav.dashboard-tabs
-  %ul
+  %ul.govuk-list
     - if current_user.persona.admin?
       %li{ class: ('active' if params[:tab] == 'allocated' || (params[:tab].blank? && controller.controller_name == 'claims')) }
         = link_to t('.allocated_claims_count', allocated_claims_count: allocated_claims_count), case_workers_claims_path(params.except(:controller, :action).merge(tab: 'allocated'))

@@ -1,11 +1,11 @@
 #defendant-numberedList.form-section.defendants.fx-numberedList-hook
 
-  %h2.heading-large
+  %h2.govuk-heading-l
     = t('.page_heading')
 
   = f.fields_for :defendants do |defendant|
     = render partial: 'external_users/claims/defendants/defendant_fields', locals: { f: defendant }
 
 .form-section.form-actions.defendants-actions
-  %hr
+  %hr.govuk-section-break.govuk-section-break--l.govuk-section-break--visible
   = link_to_add_association t('.add_another_defendant'), f, :defendants, partial: 'external_users/claims/defendants/defendant_fields', class: 'govuk-button app-button--blue', render_options: { }, data: { 'association-insertion-method': 'append', 'association-insertion-node': '.fx-numberedList-hook', module: 'govuk-button' }, role: 'button', draggable: 'false'

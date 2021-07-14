@@ -2,7 +2,7 @@
   - present(claim.last_state_transition) do |transition|
     = govuk_warning_text transition.reason_header
 
-    %ul.timed-retention-states
+    %ul.govuk-list.govuk-list--bullet
       -transition.reason_descriptions do |description|
         %li
           = description

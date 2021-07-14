@@ -840,7 +840,7 @@ en:
         page_title: View your claims archive
       authorised:
         page_heading: Your authorised claims
-        with_total_assessed_value_of: 'claims with a total assessed value of'
+        with_total_assessed_value_of_html: '%{size} of %{total} claims with a total assessed value of'
         page_title: View your authorised claims
       basic_fees:
         dates_attended:
@@ -866,7 +866,7 @@ en:
             title: Help with basic fees
             pre_agfs_reform_html:
               <p>Basic fees include:</p>
-              <ul class="list list-bullet">
+              <ul class="govuk-list govuk-list--bullet">
               <li>2 daily attendance fees</li>
               <li>4 standard appearance fees</li>
               <li>1 plea and trial preparation hearing (<abbr title= "plea and trial preparation hearing">PTPH</abbr>)</li>
@@ -874,7 +874,7 @@ en:
               </ul>
             post_agfs_reform_html:
               <p>Basic fees include:</p>
-              <ul class="list list-bullet">
+              <ul class="govuk-list govuk-list--bullet">
               <li>1 daily attendance fee</li>
               </ul>
             how_is_this_rate_calculated_html:
@@ -1025,7 +1025,7 @@ en:
           retrial_reduction_help_link: 'Help with claiming a reduced rate'
           retrial_reduction_help_html: |
               A reduced rate can be requested if: <br/>
-              <ul class="list list-bullet">
+              <ul class="govuk-list govuk-list--bullet">
                 <li>you represented the defendant(s) at the original trial</li>
                 <li>you don’t want the reduced rate to be applied to the original trial</li>
               </ul>
@@ -1479,7 +1479,7 @@ en:
           summary: 'Note: To best navigate this table, select the right hand column and then step down through the rows.'
       outstanding:
         page_heading: Your outstanding claims
-        claims_value: claims with a total value of
+        claims_value_html: '%{size} of %{total} claims with a total value of'
         page_title: View your outstanding claims
       supporting_documents:
         disk_evidence:

@@ -1,5 +1,5 @@
 #trial-dates.form-section{ class: @claim&.case_type&.requires_trial_dates? ? '' : 'hidden', 'aria-labelledby': 'trial-dates-heading' }
-  %h3#trial-dates-heading.heading-medium
+  %h3#trial-dates-heading.govuk-heading-m
     = t('.trial_detail')
 
   = f.gov_uk_date_field(:first_day_of_trial, legend_text: t('.first_day_of_trial'), legend_class: 'govuk-legend', form_hint_text: t('.date_hint'), id: "first_day_of_trial", error_messages: gov_uk_date_field_error_messages(@error_presenter, :first_day_of_trial))

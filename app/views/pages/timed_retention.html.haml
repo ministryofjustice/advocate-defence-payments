@@ -1,29 +1,30 @@
 = render partial: 'layouts/header', locals: { page_heading: t('.page_heading') }
 
-%section.timed-retention
-  %p
-    = t('.paragraph_1')
+.govuk-grid-row
+  .govuk-grid-column-two-thirds
+    %p
+      = t('.paragraph_1')
 
-  %p
-    = t('.paragraph_2', stale_weeks: "#{Settings.timed_transition_stale_weeks}")
+    %p
+      = t('.paragraph_2', stale_weeks: "#{Settings.timed_transition_stale_weeks}")
 
-  %ul.timed-retention-states
-    %li
-      = t('draft').downcase
-    %li
-      = t('authorised').downcase
-    %li
-      = t('part_authorised').downcase
-    %li
-      = t('refused').downcase
-    %li
-      = t('rejected').downcase
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        = t('draft').downcase
+      %li
+        = t('authorised').downcase
+      %li
+        = t('part_authorised').downcase
+      %li
+        = t('refused').downcase
+      %li
+        = t('rejected').downcase
 
-  %p
-    = t('.paragraph_3')
+    %p
+      = t('.paragraph_3')
 
-  %p
-    = t('.paragraph_4', archived_weeks: "#{Settings.timed_transition_pending_weeks}")
+    %p
+      = t('.paragraph_4', archived_weeks: "#{Settings.timed_transition_pending_weeks}")
 
-  %p
-    = t('.contact_us_html', email: "#{Settings.laa_contact_email}")
+    %p
+      = t('.contact_us_html', email: "#{Settings.laa_contact_email}")

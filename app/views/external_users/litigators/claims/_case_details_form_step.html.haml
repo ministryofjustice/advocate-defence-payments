@@ -1,7 +1,7 @@
 = content_for :page_title, flush: true do
   = t('.page_title')
 
-%h2.heading-large
+%h2.govuk-heading-l
   = t('.page_heading')
 
 = render partial: 'external_users/claims/api_promo_banner', locals: { claim: @claim }

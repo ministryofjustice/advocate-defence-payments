@@ -2,11 +2,16 @@
 // The _url-helpers.scss partial requires that $path is defined in your main application stylesheet.
 $path: '~images/';
 
+// Set path to GOV.UK Frontend fonts
+// TODO: remove post GOV.UK Frontend migration
+@function frontend-font-url($filename) {
+  @return url('~assets/fonts/' + $filename);
+}
+$govuk-font-url-function: frontend-font-url;
+
 // GOV.UK Frontend Toolkit (alphagov/govuk_frontend_toolkit)
 @import '~govuk_frontend_toolkit/stylesheets/colours';
-@import '~govuk_frontend_toolkit/stylesheets/font_stack';
 @import '~govuk_frontend_toolkit/stylesheets/measurements';
-@import '~govuk_frontend_toolkit/stylesheets/typography';
 @import '~govuk_frontend_toolkit/stylesheets/shims';
 
 @import '~govuk_frontend_toolkit/stylesheets/design-patterns/alpha-beta';
@@ -18,7 +23,6 @@ $path: '~images/';
 @import '~govuk-elements-sass/public/sass/elements/reset';
 
 // Components (chunks of UI)
-@import '~govuk-elements-sass/public/sass/elements/elements-typography';
 @import '~govuk-elements-sass/public/sass/elements/buttons';
 @import '~govuk-elements-sass/public/sass/elements/icons';
 @import '~govuk-elements-sass/public/sass/elements/lists';
@@ -34,7 +38,9 @@ $path: '~images/';
 @import '~govuk-elements-sass/public/sass/elements/components';
 
 @import '~govuk_frontend_toolkit/stylesheets/url-helpers'; // Function to output image-url, or prefixed path (Rails and Compass only)
+
 @import '~govuk-frontend/govuk/base';
+@import '~govuk-frontend/govuk/core/typography';
 
 // Project specific
 // Everything below this comment should be project specific.
@@ -66,6 +72,8 @@ $path: '~images/';
 @import 'print';
 
 @import 'cocoon';
+
+@import 'components/code';
 @import 'components/tag';
 @import 'components/notification_banner';
 

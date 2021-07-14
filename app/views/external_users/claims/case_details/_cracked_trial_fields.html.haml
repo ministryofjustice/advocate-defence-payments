@@ -1,5 +1,5 @@
 #cracked-trial-dates.form-section{ class: @claim&.case_type&.requires_cracked_dates? ? '' : 'hidden', 'aria-labelledby': 'cracked-trial-dates-heading' }
-  %h3#cracked-trial-dates-heading.heading-medium
+  %h3#cracked-trial-dates-heading.govuk-heading-m
     = t('.cracked_trial_details')
 
   = f.gov_uk_date_field(:trial_fixed_notice_at, legend_text: t('.trial_fixed_notice_at'), legend_class: 'govuk-legend', form_hint_text: t('.date_hint'), id: "trial_fixed_notice_at", error_messages: gov_uk_date_field_error_messages(@error_presenter, :trial_fixed_notice_at))

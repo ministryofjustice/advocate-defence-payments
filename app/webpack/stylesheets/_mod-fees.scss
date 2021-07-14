@@ -9,7 +9,7 @@
 
   .header-action {
     float: right;
-    @include core-19;
+    @include govuk-font(19);
     font-weight: 700;
   }
 }

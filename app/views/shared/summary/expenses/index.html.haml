@@ -1,5 +1,5 @@
 .table-container
-  %h3.heading-small
+  %h3.govuk-heading-s
     = t(".header_#{vat ? 'with_vat' : 'without_vat'}")
 
   %table.figures{ class: (current_user.case_worker? ? 'expenses-data-table' : nil) }

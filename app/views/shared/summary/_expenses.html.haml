@@ -1,12 +1,12 @@
 - if current_user_is_caseworker? && claim.expenses.map(&:distance_gt_calculated?).any?
   = render partial: 'shared/summary/expenses/distance_warnings', locals: { expenses: claim.expenses }
 
-%h3.heading-medium
+%h3.govuk-heading-m
   = t('.travel_expenses')
 
 - if claim.travel_expense_additional_information.present?
   = govuk_inset_text do
-    %h3.heading-small
+    %h3.govuk-heading-s
       = t('.travel_expense_additional_information')
     %p
       = claim.travel_expense_additional_information

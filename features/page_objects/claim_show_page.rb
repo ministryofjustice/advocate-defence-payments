@@ -4,7 +4,7 @@ class ClaimShowPage < BasePage
     element :archive, "li:nth-of-type(2) > a"
   end
 
-  element :status, "div.claim-hgroup div.claim-status strong.govuk-tag"
+  element :status, "div.claim-hgroup strong.govuk-tag"
   element :edit_this_claim, "div.claim-detail-actions a:nth-of-type(1)"
   element :fees, "#claim_assessment_attributes_fees"
   element :expenses, "#claim_assessment_attributes_expenses"

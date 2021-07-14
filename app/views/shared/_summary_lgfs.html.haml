@@ -1,6 +1,6 @@
 - present(@claim) do |claim|
   %section#summary
-    %h3.heading-medium
+    %h3.govuk-heading-m
       = t('common.fees')
     - if @claim.fees_total == 0
       %p
@@ -65,7 +65,7 @@
     - if claim.final? && claim.interim_claim_info.present?
       - present(claim.interim_claim_info) do |info|
         - if info.warrant_fee_paid?
-          %h3.heading-medium
+          %h3.govuk-heading-m
             = t('common.interim_claim_info')
           %table.table-summary
             %caption.hidden
@@ -83,7 +83,7 @@
                   = info.warrant_executed_date
 
     - if claim.expenses.empty?
-      %h3.heading-medium
+      %h3.govuk-heading-m
         = t('common.expenses')
       %p
         = t('shared.summary.no_values.expenses')
@@ -92,14 +92,14 @@
 
     - if claim.can_have_disbursements?
       - if claim.disbursements.empty?
-        %h3.heading-medium
+        %h3.govuk-heading-m
           = t('common.disbursements')
         %p
           = t('shared.summary.no_values.disbursements')
       - else
         / table does noe require summary
         - if claim.disbursements.with_vat.any?
-          %h3.heading-medium
+          %h3.govuk-heading-m
             = t('shared.disbursements_gross')
           %table.figures
             %caption.govuk-visually-hidden
@@ -137,7 +137,7 @@
                   = claim.disbursements_with_vat_gross
 
         - if claim.disbursements.without_vat.any?
-          %h3.heading-medium
+          %h3.govuk-heading-m
             = t('shared.disbursements_no_vat')
           %table.figures
             %caption.govuk-visually-hidden

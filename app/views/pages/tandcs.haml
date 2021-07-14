@@ -3,728 +3,757 @@
 
 = render partial: 'layouts/header', locals: { page_heading: t('.page_heading') }
 
-%section.tandcs
-  %h2.heading-medium
-    1. Introduction
-
-  %p
-    These Terms of Use (“Terms”) apply to you when you use the ‘Claim
-    for Crown Court Defence’ (“CCCD”) Application, available at
-    = govuk_link_to 'https://claim-crown-court-defence.service.gov.uk/', 'https://claim-crown-court-defence.service.gov.uk/'
-    \.
-  %p
-    The Application is a single point of log in for submitting claims
-    for payments under the Advocates’ Graduated Fee Scheme (“AGFS”) and
-    the Litigators’ Graduated Fee Scheme (“LGFS”).
-  %p
-    These terms will also apply to the Litigators’ Graduated Fee Scheme
-    LGFS, when the Legal Aid Agency (the LAA) notifies you of this.
-  %p
-    The LAA is an executive agency of the Ministry of Justice, through which
-    the Lord Chancellor acts to administer legal aid.
-  %p
-    The LAA is an executive agency of the Ministry of Justice, through which
-    the Lord Chancellor acts to administer legal aid. Our head office is at 102
-    Petty France, London, SW1H 9AJ.In using the Application you agree to be
-    bound by these Terms. Please read these Terms carefully and do not use the
-    Application if you do not agree with them.
-
-  %h2.heading-medium
-    2. Definitions
-
-  %p
-    In these terms:
-
-  %h3.heading-small Advocate
-  means either a person who is an “authorised person” or an “exempt person”,
-  for the purposes of exercising a “right of audience”, as defined by the
-  provisions of the Legal Services Act 2007 who is instructed by an Authorising
-  Organisation;
-
-  %h3.heading-small Application
-  means the CCCD application, available at   
-  = govuk_link_to 'https://claim-crown-court-defence.service.gov.uk/', 'https://claim-crown-court-defence.service.gov.uk/'
-  \.
-
-  %h3.heading-small
-    Authorised representative
-  means:
-  %ul
-    %li
-      any employee of an Authorising Organisation; or
-    %li
-      any person, firm or company authorised by an Authorising Organisation to
-      supply services to them in accordance with the Standard Terms and with
-      authority from the Authorising Organisation to accept the Terms on their
-      behalf; and, in each case, who is also an Authorised Signatory; or
-    %li
-      an Advocate; or
-    %li
-      a Litigator.
-
-  %h3.heading-small Authorised Signatory
-  means an Authorised Representative of an Authorising Organisation who meets
-  our signatory requirements as set out in the AGFS and, as applicable, LGFS bill
-  submission screens;
-
-  %h3.heading-small
-    Authorising Organisation
-  means an organisation or person making claims under the Standard Terms, or any
-  other organisation or person who has written authority from us to use the
-  Application in accordance with the Terms;
-
-  %h3.heading-small Claim
-  means an AGFS or LGFS claim for payment, correctly made in accordance with the
-  Criminal Legal Aid (Remuneration) Regulations 2013 (as amended);
-
-  %h3.heading-small
-    Controller
-  means, where Personal Data is being processed for Law Enforcement Purposes,
-  as it is defined in the Law Enforcement Directive (Directive (EU) 2016/680) (LED);
-  and in all other circumstances, as defined in the Data Protection Act 2018 and the
-  General Data Protection Regulation (Regulation (EU) 2016/679) (GDPR);
-
-  %h3.heading-small
-    Data Loss Event
-  means any event that results, or may result, in unauthorised access to Personal
-  Data held by you, and/or actual or potential loss and/or destruction of Personal
-  Data in breach of these Terms, including any Personal Data Breach;
-
-  %h3.heading-small
-    Data Protection Legislation
-  means:
-
-  %ul
-    %li
-      the Data Protection Act 2018
-    %li
-      the General Data Protection Regulation ((EU)2016/679)
-    %li
-      the Regulation of Investigatory Powers Act 2000
-    %li
-      the Telecommunications (Lawful Business Practice) (Interception of
-      Communications) Regulations 2000 (SI 2000/2699)
-    %li
-      the Electronic Communications Data Protection Directive 2002/58/EC
-    %li
-      the Privacy and Electronic Communications (EC Directive) Regulations
-      2011, and
-    %li
-      all applicable laws and regulations relating to processing of personal
-      data and privacy, including where applicable the guidance and codes of
-      practice issued by the Information Commissioner and any generally accepted
-      code of good practice.
-
-  %h3.heading-small
-    Data Security Requirements
-  means our data security requirements (which can be located on our website)
-  as may be amended by us from time to time;
-
-  %h3.heading-small
-    GDPR
-  means the General Data Protection Regulation (Regulation (EU) 2016/679);
-
-  %h3.heading-small
-    LAA Data 
-  means:
-
-  %ul
-    %li
-      the data on the Application (including drawings, diagrams, images or
-      sounds, together with any database made up of any of these which is
-      embodied in any electronic, magnetic optical or tangible media) which:
-      %ul
-        %li
-          is supplied to you by us or on our behalf;
-        %li
-          you are required to Process as part of your contract with us
-    %li
-      any Personal Data for which we are the Controller (but not including
-      the Shared Data)
-
-  %h3.heading-small
-    Law Enforcement Purposes
-  means as it is defined in the Data Protection Act 2018;
-
-  %h3.heading-small
-    LED
-  means the Law Enforcement Directive (Directive (EU) 2016/680);
-
-  %h3.heading-small
-    Legal Aid Legislation
-  means the Legal Aid, Sentencing and Punishment of Offenders Act 2012 and
-  statutory instruments made under that act that are relevant to the AGFS or LGFS;
-
-  %h3.heading-small
-    Litigator
-  means a solicitor, firm of solicitors or other appropriately qualified
-  person referred to in a representation order as representing an assisted
-  person;
-
-  %h3.heading-small
-    Personal Data 
-  has the same meaning as the definition in the Data Protection Act 2018 and
-  the GDPR;
-
-  %h3.heading-small
-    Personal Data Breach
-  means as it is defined in the Data Protection Act 2018 and the GDPR;
-
-  %h3.heading-small Process
-  has the same meaning as the definition in the Data Protection Legislation but,
-  for the purposes of these Terms, it shall include both manual and automatic
-  processing;
-
-  %h3.heading-small Processor
-  means, where Personal Data is being Processed for Law Enforcement Purposes, as
-  it is defined in the LED; and in all other circumstances, as it is defined in
-  the Data Protection Act 2018 and the GDPR;
-
-  %h3.heading-small Protective Measures
-  means the appropriate technical and organisational measures which may include:
-  pseudonymising and encrypting Personal Data, ensuring confidentiality, integrity,
-  availability and resilience of systems and services, ensuring that availability of
-  and access to Personal Data can be restored in a timely manner after an incident,
-  and regularly assessing and evaluating the effectiveness of the such measures
-  adopted by it;
-
-  %h3.heading-small
-    Shared Data
-  means data (including Personal Data) on the Application for which you are the
-  Controller, either alone or jointly with us;
-
-  %h3.heading-small
-    Standard Terms
-  means, as applicable:
-
-  %ul
-    %li
-      the 2010 Standard Civil Contract, the 2010 Standard Crime Contract,
-      the 2013 CLA Contract, any 2013 Standard Civil Contract, 2017 Standard
-      Crime Contract, 2018 Standard Civil Contract or any replacement
-      contract available at:
-      = govuk_link_to 'www.gov.uk/topic/legal-aid-for-providers/contracts', 'https://www.gov.uk/topic/legal-aid-for-providers/contracts', rel: 'external'
-      or any other contract, entered into between us and an Authorising
-      Organisation for the provision of legal aid services, as each such
-      contract is amended and updated from time to time;
-      and
-    %li
-      the Criminal Legal Aid (Remuneration) Regulations 2013 (as amended)
-      being regulations incorporating both the AGFS and the LGFS and available at:
-      = govuk_link_to 'www.legislation.gov.uk/uksi/2013/435/contents/made', 'http://www.legislation.gov.uk/uksi/2013/435/contents/made', rel: 'external'
-  %p
-    and for the avoidance of doubt Advocates and Litigators shall be bound
-    by the most recent version of the relevant Standard Terms where and to
-    the extent that an obligation within these Terms of Use makes reference
-    to the Standard Terms;
-  %p
-    Reference to any ‘Legal Aid Legislation’ and ‘other legislation’
-    (including any subordinate legislation made under it) is, as the
-    context requires, a reference to any substitute for, amendment,
-    variation or re-enactment of this legislation and any subordinate
-    legislation made under it (whether on or after the date of these Terms)
-    and is a reference to any legislation which supersedes it and/or any
-    subordinate legislation made under it and includes any new legal aid
-    legislation in force on or after the date of these Terms.
-
-  %h3.heading-small
-    We, us, our 
-  means the Lord Chancellor acting through the LAA.
-
-  %h3.heading-small
-    You, your 
-  refers to (unless expressly indicated otherwise) you as an Authorised
-  Representative, whom an Authorising Organisation has authorised to
-  use the Application, an Advocate or a Litigator.
-
-  %h2.heading-medium
-    3. Authorising Organisation and Instructed Counsel
-
-  %p
-    To use the application, you must be:
-  %ul
-    %li
-      an Authorised Representative
-    %li
-      an Authorised Signatory
-    %li
-      an Advocate, or
-    %li
-      a Litigator
-  %p
-    The Authorising Organisation will make sure that any Authorised
-    Representative who it allows to access the Application complies with
-    these terms and the applicable provisions in the Standard Terms.
-  %p
-    If you are an Authorised Representative, Advocate or Litigator, you
-    shall comply with these Terms when using the application.
-
-  %h2.heading-medium
-    4. Licence to use the Application
-
-  %h3.heading-small
-    Authorised representatives
-
-  %p
-    Subject to section 13 below, we grant you a non-exclusive, non-transferable
-    and revocable licence to use the Application in accordance with the purposes
-    set out in the Standard Terms.
-
-  %h3.heading-small Advocates
-
-  %p
-    Subject to section 13 below, we grant you a non-exclusive, non-transferable
-    and revocable licence to use the Application to help us fulfil our statutory
-    obligations under Part 1 of the Legal Aid, Sentencing and Punishment of Offenders
-    Act 2012 relating to the legal aid scheme.
-
-  %h3.heading-small
-    Litigators
-
-  %p
-    Subject to section 13 below, we grant you a non-exclusive, non-transferable and
-    revocable licence to use the Application in accordance with the purposes set out
-    in the Standard Terms.
-
-  %h2.heading-medium
-    5. Information on the Application
-
-  %p
-    You acknowledge that any information and other materials posted on the Application
-    are not intended to amount to advice on which reliance should be placed.
-
-  %h2.heading-medium
-    6. Availability of the Application
-
-  %p
-    We will use reasonable endeavours to make sure that the Application is
-    available but we will not be liable to you if for any reason it is
-    unavailable at any time or for any period.
-  %p
-    We reserve the right to withdraw or amend the Application or the services we
-    provide through it without notice.
-  %p
-    From time to time, we may:
-  %ul
-    %li
-      restrict access to some or all of the Application
-    %li
-      make changes to the Application and any material on it
-
-  %h2.heading-medium
-    7. Information Submitted Through the Application
-
-  %p
-    As an authorising organisation, you will make sure that:
-  %ul
-    %li
-      your Authorised Representatives, Advocates and Litigators submit claims,
-      information and requests through the Application in accordance with the
-      Standard Terms;
-    %li
-      your Authorised Representatives, Advocates and Litigators do not make the
-      same submission in paper form and electronically through the Application
-      unless authorised to do so by us; and
-    %li
-      your Authorised Representatives, Advocates and Litigators submit only true,
-      accurate and reasonable claims, and you acknowledge that any breach of this
-      requirement is a material breach of these Terms and Standard Terms by you
-  %p
-    As an Advocate or Litigator, you shall:
-  %ul
-    %li
-      submit Claims, information and requests through the Application in accordance
-      with these Terms
-    %li
-      not make the same submission in paper form and electronically through the
-      Application unless authorised to do so by us; and
-    %li
-      submit only true, accurate and reasonable claims
-  %p
-    As an Advocate, you acknowledge that any breach of this section is a material
-    breach of these Terms by you.
-  %p
-    We will use the information you provide through the Application to administer
-    your Claims and submissions in accordance with the Legal Aid Legislation, and
-    the Standard Terms where appropriate.
-
-  %h2.heading-medium
-    8. Data Protection
-
-  %p
-    You shall comply with:
-  %ul
-    %li
-      any notification requirements under the Data Protection Legislation
-    %li
-      all obligations imposed on you by the Data Protection Legislation while
-      Processing data on the Application, and
-    %li
-      Clause 16 (data protection) of the Standard Terms
-  %p
-    Any inconsistency between this section 8 and clause 16 (Data protection)
-    of the standard terms shall be resolved in favour of clause 16 (Data
-    protection) of the standard terms.
-  %p
-    Without prejudice to the general obligations above, in relation to the
-    data on the Application, you shall:
-  %ul
-    %li
-      comply with the Processor’s obligations when processing any LAA Data or
-      Shared Data that we are responsible for as Controller;
-    %li
-      comply with the obligations of the Controller, to the extent that you
-      are Controller either alone or jointly with us of any Shared Data;
-    %li
-      not process the LAA Data or Shared Data except as necessary for you to
-      fulfil your obligations under the Standard Terms or as otherwise expressly
-      authorised by us in writing;
-    %li
-      if you are an Advocate, ensure that you do not process the LAA Data or
-      Shared Data except as necessary for you to perform your instructions;
-    %li
-      ensure that Protective Measures (including but not limited to compliance
-      with the Data Security Requirements and with any such measures specified
-      in the Standard Terms) are in place to protect against a Data Loss Event,
-      having taken into account of the nature of the data to be protected, the
-      harm that might result from a Data Loss Event, the state of technological
-      development and the cost of implementing any such measures;
-    %li
-      provide us with such information, co-operation and assistance as we may
-      reasonably require, including, without limitation, in order either to be
-      satisfied that you are complying with your obligations contained in, or
-      in order to comply with any obligations imposed on us by
-      virtue of, the Data Protection Legislation;
-    %li
-      promptly notify us of any Data Loss Event or of any breach of the Protective
-      Measures required to be put in place pursuant to this section 8
-    %li
-      not knowingly or negligently do or omit to do anything which places us in
-      breach of our obligations under the Data Protection Legislation
-  %p
-    In the event of a Data Loss Event or if the LAA Data or Shared Data is lost,
-    corrupted or degraded by you, whether knowingly or otherwise, so that it is
-    unusable, we may at our sole discretion:
-  %ul
-    %li
-      require you (at your reasonable expense) to restore or procure the
-      restoration of LAA Data or Shared Data in accordance with our requirements;
-      and/or
-    %li
-      restore or procure the restoration of LAA Data or Shared Data ourselves
-      and require you to reimburse any reasonable expenses incurred in accordance
-      with our requirements
-  %p
-    The Authorising Organisation shall defend, indemnify and hold us
-    harmless against claims, actions, proceedings, losses, damages,
-    expenses, fines, administrative penalties and costs (including without
-    limitation court costs and reasonable legal fees) arising from a breach
-    of any obligations set out in this section 8 or any of your obligations
-    under the Data Protection Legislation.
-  %p
-    The provisions of this section 8 shall apply for as long as you continue
-    to have a valid licence to use the Application under section 4, and shall
-    continue to apply for a period of six years following termination (howsoever
-    caused) of your licence.
-
-  %h2.heading-medium
-    9. Users and Passwords
-
-  %h3.heading-small
-    Advocate user 
-
-  %p
-    The Advocate user can create, edit, submit, view, manage and delete bills.
-    However, the Advocate user can only create, edit, submit, view, manage
-    and delete their own bills.
-
-  %h3.heading-small
-    Advocate administrator user
-
-  %p
-    The Advocate administrator user can create, edit, submit, view, manage
-    and delete bills of any Advocates for whom they have been allocated
-    responsibility. They can also set up other users as Advocate administrator
-    users and Advocate users.
-  %p
-    Where we provide you (as the Authorising Organisation) with Advocate
-    administrator user or Advocate user rights, you shall ensure that the
-    Authorised Representatives:
-  %ul
-    %li
-      understand their obligations under these Terms
-    %li
-      understand the nature and scope of their permissions and do not exceed such
-      permissions; and
-    %li
-      are prevented from accessing the Application once they cease to be
-      authorised to do so
-  %p
-    If you receive a username, password or any other piece of information as part
-    of our security procedures, you must treat this as confidential and not disclose
-    it to anyone. We have the right to disable or change any username or password,
-    whether chosen by you or allocated by us, at any time if we believe you have
-    failed to comply with any of the provisions of these Terms or we believe it
-    is necessary to safeguard the Application’s security.
-  %p
-    You are responsible for making all arrangements necessary for you to have
-    access to the application.
-  %p
-    If you have more than one set of usernames and passwords provided by
-    different Authorising Organisations, Advocates or Litigators (as applicable),
-    you shall only use each username and password in accordance with the permissions
-    and purposes authorised by the issuing Authorising Organisation.
-
-  %h2.heading-medium
-    10. Intellectual Property Rights
-
-  %p
-    We are the owner or the licensee of all intellectual property rights in the
-    Application, and in the material published on it. These rights are protected
-    by international copyright laws and treaties. All such rights are reserved.
-  %p
-    You may print extracts from the contents of the Application only when
-    you need to do so to use the service provided by the Application, (and
-    provided that you do not alter, amend or delete any intellectual property
-    rights, notices or marks). Reproduction of all or part of the Application
-    or its contents in any form is prohibited for any other purpose. None of the
-    contents of the Application may be copied or otherwise incorporated into or
-    stored in any other electronic system, publication or other work in any form
-    (whether hard copy, electronic or other) other than as set out in this
-    section 10.
-  %p
-    You must not modify in any way the paper or digital copies of any materials
-    you have printed off or downloaded.
-  %p
-    If you print off, copy or download any part of the Application in breach
-    of these Terms, you must, at our option, return or destroy any copies that
-    you have made of any materials from the Application and we shall have the
-    right to take action in accordance with section 13.
-
-  %h2.heading-medium
-    11. Prohibited Uses
-
-  %p
-    You may not use the application:
-  %ul
-    %li
-      in any way that breaches any applicable local, national or
-      international law or regulation; or
-    %li
-      in any way that is unlawful or fraudulent, or has any unlawful or
-      fraudulent purpose or effect; or
-    %li
-      to knowingly transmit any data, send or upload any material that
-      contains viruses, Trojan horses, worms, time-bombs, keystroke
-      loggers, spyware, adware or any other harmful programs or similar
-      computer code designed to adversely affect the operation of any
-      computer software or hardware
-  %p
-    You also agree:
-  %ul
-    %li
-      not to reproduce, duplicate, copy or re-sell any part of the application
-      in contravention of the provisions of these terms;
-    %li
-      not to access without authority, interfere with, damage or disrupt:
-      %ul
-        %li
-          any part of the Application;
-        %li
-          any equipment or network on which the Application is stored;
-        %li
-          any software and/or database used in the provision of the Application;
-        %li
-          any equipment or network or software owned or used by any third
-          party; or
-        %li
-          other users' accounts or information; and
-    %li
-      not to attack the Application via a denial-of-service attack or a
-      distributed denial-of-service attack
-  %p
-    By breaching this section 11, you may commit a criminal offence under
-    the Computer Misuse Act 1990. We will report any such breach to the
-    relevant law enforcement authorities and co-operate with those
-    authorities by disclosing your identity. In the event of such a
-    breach, your right to use the application will cease immediately.
-
-  %h2.heading-medium
-    12. Links from the Application
-
-  %p
-    Where the Application contains links to other websites and resources
-    provided by third parties, these links are provided for your
-    information only. We have no control over the contents of those
-    websites or resources, and accept no responsibility for them or for
-    any loss or damage that may arise from your use of them.
-
-  %h2.heading-medium
-    13. Suspension and Termination
-
-  %p
-    We may revoke the licence granted to you in section 4 and terminate
-    these Terms with immediate effect if you breach these Terms.
-  %p
-    We will determine, at our discretion, whether you have breached these
-    terms. When a breach of these Terms has occurred, we may take
-    whatever action we consider appropriate.
-  %p
-    If you don’t comply with these Terms, we may do any or all of the
-    following:
-  %ul
-    %li
-      immediately, temporarily or permanently withdraw your right to use the
-      Application;
-    %li
-      immediately, temporarily or permanently remove any material you have
-      uploaded to the Application;
-    %li
-      issue you a warning;
-    %li
-      issue legal proceedings against you for reimbursement of all costs on an
-      indemnity basis resulting from the breach (including, but not
-      limited to, reasonable administrative and legal costs)
-    %li
-      take further legal action against you; and
-    %li
-      disclose such information to law enforcement authorities as we reasonably
-      feel is necessary
-  %p
-    We exclude liability for our actions taken in response to breaches of
-    these Terms. The responses described in these Terms are not limited,
-    and we may take any other action we reasonably consider appropriate.
-
-  %h2.heading-medium
-    14. Liability
-
-  %p
-    In accordance with the Terms, the Authorising Organisation shall be
-    responsible for the acts or omissions of the Authorised Representatives
-    and Litigators, and in respect of section 7, Advocates. The Authorising
-    Organisation shall defend, indemnify and hold us harmless against claims,
-    actions, proceedings, losses, damages, expenses and costs (including without
-    limitation court costs and reasonable legal fees) arising out of the acts
-    or omissions of the Authorised Representatives, Advocates and Litigators.
-  %p
-    To the extent permitted by law, the Application is provided without any
-    guarantee, conditions or warranties as to its availability, accuracy
-    or fitness for purpose.
-  %p
-    To the extent permitted by law, we expressly exclude all and any
-    liability to you in respect of all or any claims arising out of or in
-    connection with these terms and your use of the Application
-    (including without limitation as a result of negligence or any other
-    tort under statute or otherwise).
-  %p
-    To the extent permitted by law, we exclude all conditions, warranties
-    and other terms that might otherwise be implied by statute, common
-    law or the law of equity.
-  %p
-    We will not be liable for any loss or damage caused by a distributed
-    denial-of-service attack, viruses or other technologically harmful
-    material that may infect your computer equipment, computer programs,
-    data or other proprietary material due to your use of the Application
-    or to your downloading of any content on it, or on any website linked
-    to it.
-
-  %h2.heading-medium
-    15. Changes to these Terms
-
-  %p
-    We may amend these Terms from time to time and we will notify you of
-    this on our website. Such changes are effective from the date they
-    are notified. Your continued use of the Application after this date shows
-    your acceptance of such changes.
-
-  %h2.heading-medium
-    16. Information About You and Your Visits to Our Site
-
-  %h3.heading-small
-    Your information
-
-  %p
-    We collect and process your Personal Data (such as your contact details
-    and your IP address) in accordance with these Terms. By using the Application,
-    you consent to this.
-
-  %h3.heading-small Cookies
-
-  %p
-    We may use information obtained about you from cookies (files that your
-    computer or other device sends to us) which we can access when you
-    visit the Application in future. The cookies store small pieces of
-    information about our users, such as names and email addresses.
-  %p
-    There are different kinds of cookies with different functions:
-
-  %h3.heading-small
-    Session cookies: 
-  these cookies are only stored on your computer during your web session.
-  They are automatically deleted when the browser is closed. They
-  usually store an anonymous session ID, which allows you to browse a
-  website without having to log in to each page. They do not collect
-  any information from your computer.
-
-  %h3.heading-small
-    Persistent cookies: 
-  a persistent cookie is stored as a file on your computer, and it
-  remains there when you close your web browser. The cookie can be read
-  by the website that created it when you visit that website again. We
-  do not use persistent cookies other than for Google Analytics (please
-  see below for information on Google Analytics).
-
-  %h3.heading-small
-    Google Analytics: 
-  The Application uses Google Analytics, a web analytics service provided
-  by Google. Google Analytics uses cookies to analyse how the Application
-  is being used. The information generated by the cookie about your use of
-  the Application (including your IP address) will be transmitted to and stored
-  by Google on servers in the US. Google will use this information to evaluate
-  your use of the Application, compiling reports on the Application activity
-  and internet usage. Google may also transfer this information to third parties
-  where required to do so by law, or where such third parties process the
-  information on Google’s behalf. Google will not associate your IP address
-  with any other data held by Google. By using the Application, you consent
-  to Google processing your Personal Data in the manner and for the purposes
-  set out above.
-
-  %h3.heading-small
-    Deleting cookies:
-
-  %p
-    If you want to delete any cookies that are already on your computer,
-    please read the instructions for your file management software to
-    locate the file or directory that stores cookies. If you want to stop
-    cookies being stored on your computer in future, please refer to your
-    browser manufacturer’s instructions by clicking "Help"
-    in your browser menu. You can find out more about deleting or
-    controlling cookies at
-    = govuk_link_to 'www.AboutCookies.org', 'http://www.AboutCookies.org', rel: 'external'
-    \.
-  %p
-    Please note: if you delete our cookies or disable future cookies you
-    may not be able to access certain areas or features of the
-    Application.
-
-  %h2.heading-medium
-    17. Jurisdiction and Applicable Law
-
-  %p
-    These
-    Terms and any disputes or claims arising out of or in connection with
-    them or their subject matter or formation (including non-contractual
-    disputes or claims) are governed by and construed in accordance with
-    the laws of England and Wales.
-  %p
-    We both irrevocably agree that the courts of England and Wales have
-    exclusive jurisdiction to settle any dispute or claim that arises out
-    of or in connection with these terms or their subject matter or
-    formation (including non-contractual disputes or claims).
-
-  %h3.heading-small
-    Contact Us
-
-  %p
-    You can write to us at: The Legal Aid Agency, 102 Petty France, London,
-    SW1H 9AJ. 
+.govuk-grid-row
+  .govuk-grid-column-two-thirds.tandcs
+    %h2.govuk-heading-m
+      1. Introduction
+
+    %p
+      These Terms of Use (“Terms”) apply to you when you use the ‘Claim
+      for Crown Court Defence’ (“CCCD”) Application, available at
+      = govuk_link_to 'https://claim-crown-court-defence.service.gov.uk/', 'https://claim-crown-court-defence.service.gov.uk/'
+      \.
+    %p
+      The Application is a single point of log in for submitting claims
+      for payments under the Advocates’ Graduated Fee Scheme (“AGFS”) and
+      the Litigators’ Graduated Fee Scheme (“LGFS”).
+    %p
+      These terms will also apply to the Litigators’ Graduated Fee Scheme
+      LGFS, when the Legal Aid Agency (the LAA) notifies you of this.
+    %p
+      The LAA is an executive agency of the Ministry of Justice, through which
+      the Lord Chancellor acts to administer legal aid.
+    %p
+      The LAA is an executive agency of the Ministry of Justice, through which
+      the Lord Chancellor acts to administer legal aid. Our head office is at 102
+      Petty France, London, SW1H 9AJ.In using the Application you agree to be
+      bound by these Terms. Please read these Terms carefully and do not use the
+      Application if you do not agree with them.
+
+    %h2.govuk-heading-m
+      2. Definitions
+
+    %p
+      In these terms:
+
+    %h3.govuk-heading-s Advocate
+    %p
+      means either a person who is an “authorised person” or an “exempt person”,
+      for the purposes of exercising a “right of audience”, as defined by the
+      provisions of the Legal Services Act 2007 who is instructed by an Authorising
+      Organisation;
+
+    %h3.govuk-heading-s Application
+    %p
+      means the CCCD application, available at
+      = govuk_link_to 'https://claim-crown-court-defence.service.gov.uk/', 'https://claim-crown-court-defence.service.gov.uk/'
+      \.
+
+    %h3.govuk-heading-s
+      Authorised representative
+    %p
+      means:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        any employee of an Authorising Organisation; or
+      %li
+        any person, firm or company authorised by an Authorising Organisation to
+        supply services to them in accordance with the Standard Terms and with
+        authority from the Authorising Organisation to accept the Terms on their
+        behalf; and, in each case, who is also an Authorised Signatory; or
+      %li
+        an Advocate; or
+      %li
+        a Litigator.
+
+    %h3.govuk-heading-s Authorised Signatory
+    %p
+      means an Authorised Representative of an Authorising Organisation who meets
+      our signatory requirements as set out in the AGFS and, as applicable, LGFS bill
+      submission screens;
+
+    %h3.govuk-heading-s
+      Authorising Organisation
+    %p
+      means an organisation or person making claims under the Standard Terms, or any
+      other organisation or person who has written authority from us to use the
+      Application in accordance with the Terms;
+
+    %h3.govuk-heading-s Claim
+    %p
+      means an AGFS or LGFS claim for payment, correctly made in accordance with the
+      Criminal Legal Aid (Remuneration) Regulations 2013 (as amended);
+
+    %h3.govuk-heading-s
+      Controller
+    %p
+      means, where Personal Data is being processed for Law Enforcement Purposes,
+      as it is defined in the Law Enforcement Directive (Directive (EU) 2016/680) (LED);
+      and in all other circumstances, as defined in the Data Protection Act 2018 and the
+      General Data Protection Regulation (Regulation (EU) 2016/679) (GDPR);
+
+    %h3.govuk-heading-s
+      Data Loss Event
+    %p
+      means any event that results, or may result, in unauthorised access to Personal
+      Data held by you, and/or actual or potential loss and/or destruction of Personal
+      Data in breach of these Terms, including any Personal Data Breach;
+
+    %h3.govuk-heading-s
+      Data Protection Legislation
+    %p
+      means:
+
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        the Data Protection Act 2018
+      %li
+        the General Data Protection Regulation ((EU)2016/679)
+      %li
+        the Regulation of Investigatory Powers Act 2000
+      %li
+        the Telecommunications (Lawful Business Practice) (Interception of
+        Communications) Regulations 2000 (SI 2000/2699)
+      %li
+        the Electronic Communications Data Protection Directive 2002/58/EC
+      %li
+        the Privacy and Electronic Communications (EC Directive) Regulations
+        2011, and
+      %li
+        all applicable laws and regulations relating to processing of personal
+        data and privacy, including where applicable the guidance and codes of
+        practice issued by the Information Commissioner and any generally accepted
+        code of good practice.
+
+    %h3.govuk-heading-s
+      Data Security Requirements
+    %p
+      means our data security requirements (which can be located on our website)
+      as may be amended by us from time to time;
+
+    %h3.govuk-heading-s
+      GDPR
+    %p
+      means the General Data Protection Regulation (Regulation (EU) 2016/679);
+
+    %h3.govuk-heading-s
+      LAA Data
+    %p
+      means:
+
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        the data on the Application (including drawings, diagrams, images or
+        sounds, together with any database made up of any of these which is
+        embodied in any electronic, magnetic optical or tangible media) which:
+        %ul.govuk-list.govuk-list--bullet
+          %li
+            is supplied to you by us or on our behalf;
+          %li
+            you are required to Process as part of your contract with us
+      %li
+        any Personal Data for which we are the Controller (but not including
+        the Shared Data)
+
+    %h3.govuk-heading-s
+      Law Enforcement Purposes
+    %p
+      means as it is defined in the Data Protection Act 2018;
+
+    %h3.govuk-heading-s
+      LED
+    %p
+      means the Law Enforcement Directive (Directive (EU) 2016/680);
+
+    %h3.govuk-heading-s
+      Legal Aid Legislation
+    %p
+      means the Legal Aid, Sentencing and Punishment of Offenders Act 2012 and
+      statutory instruments made under that act that are relevant to the AGFS or LGFS;
+
+    %h3.govuk-heading-s
+      Litigator
+    %p
+      means a solicitor, firm of solicitors or other appropriately qualified
+      person referred to in a representation order as representing an assisted
+      person;
+
+    %h3.govuk-heading-s
+      Personal Data
+    %p
+      has the same meaning as the definition in the Data Protection Act 2018 and
+      the GDPR;
+
+    %h3.govuk-heading-s
+      Personal Data Breach
+    %p
+      means as it is defined in the Data Protection Act 2018 and the GDPR;
+
+    %h3.govuk-heading-s Process
+    %p
+      has the same meaning as the definition in the Data Protection Legislation but,
+      for the purposes of these Terms, it shall include both manual and automatic
+      processing;
+
+    %h3.govuk-heading-s Processor
+    %p
+      means, where Personal Data is being Processed for Law Enforcement Purposes, as
+      it is defined in the LED; and in all other circumstances, as it is defined in
+      the Data Protection Act 2018 and the GDPR;
+
+    %h3.govuk-heading-s Protective Measures
+    %p
+      means the appropriate technical and organisational measures which may include:
+      pseudonymising and encrypting Personal Data, ensuring confidentiality, integrity,
+      availability and resilience of systems and services, ensuring that availability of
+      and access to Personal Data can be restored in a timely manner after an incident,
+      and regularly assessing and evaluating the effectiveness of the such measures
+      adopted by it;
+
+    %h3.govuk-heading-s
+      Shared Data
+    %p
+      means data (including Personal Data) on the Application for which you are the
+      Controller, either alone or jointly with us;
+
+    %h3.govuk-heading-s
+      Standard Terms
+    %p
+      means, as applicable:
+
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        the 2010 Standard Civil Contract, the 2010 Standard Crime Contract,
+        the 2013 CLA Contract, any 2013 Standard Civil Contract, 2017 Standard
+        Crime Contract, 2018 Standard Civil Contract or any replacement
+        contract available at:
+        = govuk_link_to 'www.gov.uk/topic/legal-aid-for-providers/contracts', 'https://www.gov.uk/topic/legal-aid-for-providers/contracts', rel: 'external'
+        or any other contract, entered into between us and an Authorising
+        Organisation for the provision of legal aid services, as each such
+        contract is amended and updated from time to time;
+        and
+      %li
+        the Criminal Legal Aid (Remuneration) Regulations 2013 (as amended)
+        being regulations incorporating both the AGFS and the LGFS and available at:
+        = govuk_link_to 'www.legislation.gov.uk/uksi/2013/435/contents/made', 'http://www.legislation.gov.uk/uksi/2013/435/contents/made', rel: 'external'
+    %p
+      and for the avoidance of doubt Advocates and Litigators shall be bound
+      by the most recent version of the relevant Standard Terms where and to
+      the extent that an obligation within these Terms of Use makes reference
+      to the Standard Terms;
+    %p
+      Reference to any ‘Legal Aid Legislation’ and ‘other legislation’
+      (including any subordinate legislation made under it) is, as the
+      context requires, a reference to any substitute for, amendment,
+      variation or re-enactment of this legislation and any subordinate
+      legislation made under it (whether on or after the date of these Terms)
+      and is a reference to any legislation which supersedes it and/or any
+      subordinate legislation made under it and includes any new legal aid
+      legislation in force on or after the date of these Terms.
+
+    %h3.govuk-heading-s
+      We, us, our
+    %p
+      means the Lord Chancellor acting through the LAA.
+
+    %h3.govuk-heading-s
+      You, your
+    %p
+      refers to (unless expressly indicated otherwise) you as an Authorised
+      Representative, whom an Authorising Organisation has authorised to
+      use the Application, an Advocate or a Litigator.
+
+    %h2.govuk-heading-m
+      3. Authorising Organisation and Instructed Counsel
+
+    %p
+      To use the application, you must be:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        an Authorised Representative
+      %li
+        an Authorised Signatory
+      %li
+        an Advocate, or
+      %li
+        a Litigator
+    %p
+      The Authorising Organisation will make sure that any Authorised
+      Representative who it allows to access the Application complies with
+      these terms and the applicable provisions in the Standard Terms.
+    %p
+      If you are an Authorised Representative, Advocate or Litigator, you
+      shall comply with these Terms when using the application.
+
+    %h2.govuk-heading-m
+      4. Licence to use the Application
+
+    %h3.govuk-heading-s
+      Authorised representatives
+
+    %p
+      Subject to section 13 below, we grant you a non-exclusive, non-transferable
+      and revocable licence to use the Application in accordance with the purposes
+      set out in the Standard Terms.
+
+    %h3.govuk-heading-s Advocates
+
+    %p
+      Subject to section 13 below, we grant you a non-exclusive, non-transferable
+      and revocable licence to use the Application to help us fulfil our statutory
+      obligations under Part 1 of the Legal Aid, Sentencing and Punishment of Offenders
+      Act 2012 relating to the legal aid scheme.
+
+    %h3.govuk-heading-s
+      Litigators
+
+    %p
+      Subject to section 13 below, we grant you a non-exclusive, non-transferable and
+      revocable licence to use the Application in accordance with the purposes set out
+      in the Standard Terms.
+
+    %h2.govuk-heading-m
+      5. Information on the Application
+
+    %p
+      You acknowledge that any information and other materials posted on the Application
+      are not intended to amount to advice on which reliance should be placed.
+
+    %h2.govuk-heading-m
+      6. Availability of the Application
+
+    %p
+      We will use reasonable endeavours to make sure that the Application is
+      available but we will not be liable to you if for any reason it is
+      unavailable at any time or for any period.
+    %p
+      We reserve the right to withdraw or amend the Application or the services we
+      provide through it without notice.
+    %p
+      From time to time, we may:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        restrict access to some or all of the Application
+      %li
+        make changes to the Application and any material on it
+
+    %h2.govuk-heading-m
+      7. Information Submitted Through the Application
+
+    %p
+      As an authorising organisation, you will make sure that:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        your Authorised Representatives, Advocates and Litigators submit claims,
+        information and requests through the Application in accordance with the
+        Standard Terms;
+      %li
+        your Authorised Representatives, Advocates and Litigators do not make the
+        same submission in paper form and electronically through the Application
+        unless authorised to do so by us; and
+      %li
+        your Authorised Representatives, Advocates and Litigators submit only true,
+        accurate and reasonable claims, and you acknowledge that any breach of this
+        requirement is a material breach of these Terms and Standard Terms by you
+    %p
+      As an Advocate or Litigator, you shall:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        submit Claims, information and requests through the Application in accordance
+        with these Terms
+      %li
+        not make the same submission in paper form and electronically through the
+        Application unless authorised to do so by us; and
+      %li
+        submit only true, accurate and reasonable claims
+    %p
+      As an Advocate, you acknowledge that any breach of this section is a material
+      breach of these Terms by you.
+    %p
+      We will use the information you provide through the Application to administer
+      your Claims and submissions in accordance with the Legal Aid Legislation, and
+      the Standard Terms where appropriate.
+
+    %h2.govuk-heading-m
+      8. Data Protection
+
+    %p
+      You shall comply with:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        any notification requirements under the Data Protection Legislation
+      %li
+        all obligations imposed on you by the Data Protection Legislation while
+        Processing data on the Application, and
+      %li
+        Clause 16 (data protection) of the Standard Terms
+    %p
+      Any inconsistency between this section 8 and clause 16 (Data protection)
+      of the standard terms shall be resolved in favour of clause 16 (Data
+      protection) of the standard terms.
+    %p
+      Without prejudice to the general obligations above, in relation to the
+      data on the Application, you shall:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        comply with the Processor’s obligations when processing any LAA Data or
+        Shared Data that we are responsible for as Controller;
+      %li
+        comply with the obligations of the Controller, to the extent that you
+        are Controller either alone or jointly with us of any Shared Data;
+      %li
+        not process the LAA Data or Shared Data except as necessary for you to
+        fulfil your obligations under the Standard Terms or as otherwise expressly
+        authorised by us in writing;
+      %li
+        if you are an Advocate, ensure that you do not process the LAA Data or
+        Shared Data except as necessary for you to perform your instructions;
+      %li
+        ensure that Protective Measures (including but not limited to compliance
+        with the Data Security Requirements and with any such measures specified
+        in the Standard Terms) are in place to protect against a Data Loss Event,
+        having taken into account of the nature of the data to be protected, the
+        harm that might result from a Data Loss Event, the state of technological
+        development and the cost of implementing any such measures;
+      %li
+        provide us with such information, co-operation and assistance as we may
+        reasonably require, including, without limitation, in order either to be
+        satisfied that you are complying with your obligations contained in, or
+        in order to comply with any obligations imposed on us by
+        virtue of, the Data Protection Legislation;
+      %li
+        promptly notify us of any Data Loss Event or of any breach of the Protective
+        Measures required to be put in place pursuant to this section 8
+      %li
+        not knowingly or negligently do or omit to do anything which places us in
+        breach of our obligations under the Data Protection Legislation
+    %p
+      In the event of a Data Loss Event or if the LAA Data or Shared Data is lost,
+      corrupted or degraded by you, whether knowingly or otherwise, so that it is
+      unusable, we may at our sole discretion:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        require you (at your reasonable expense) to restore or procure the
+        restoration of LAA Data or Shared Data in accordance with our requirements;
+        and/or
+      %li
+        restore or procure the restoration of LAA Data or Shared Data ourselves
+        and require you to reimburse any reasonable expenses incurred in accordance
+        with our requirements
+    %p
+      The Authorising Organisation shall defend, indemnify and hold us
+      harmless against claims, actions, proceedings, losses, damages,
+      expenses, fines, administrative penalties and costs (including without
+      limitation court costs and reasonable legal fees) arising from a breach
+      of any obligations set out in this section 8 or any of your obligations
+      under the Data Protection Legislation.
+    %p
+      The provisions of this section 8 shall apply for as long as you continue
+      to have a valid licence to use the Application under section 4, and shall
+      continue to apply for a period of six years following termination (howsoever
+      caused) of your licence.
+
+    %h2.govuk-heading-m
+      9. Users and Passwords
+
+    %h3.govuk-heading-s
+      Advocate user
+
+    %p
+      The Advocate user can create, edit, submit, view, manage and delete bills.
+      However, the Advocate user can only create, edit, submit, view, manage
+      and delete their own bills.
+
+    %h3.govuk-heading-s
+      Advocate administrator user
+
+    %p
+      The Advocate administrator user can create, edit, submit, view, manage
+      and delete bills of any Advocates for whom they have been allocated
+      responsibility. They can also set up other users as Advocate administrator
+      users and Advocate users.
+    %p
+      Where we provide you (as the Authorising Organisation) with Advocate
+      administrator user or Advocate user rights, you shall ensure that the
+      Authorised Representatives:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        understand their obligations under these Terms
+      %li
+        understand the nature and scope of their permissions and do not exceed such
+        permissions; and
+      %li
+        are prevented from accessing the Application once they cease to be
+        authorised to do so
+    %p
+      If you receive a username, password or any other piece of information as part
+      of our security procedures, you must treat this as confidential and not disclose
+      it to anyone. We have the right to disable or change any username or password,
+      whether chosen by you or allocated by us, at any time if we believe you have
+      failed to comply with any of the provisions of these Terms or we believe it
+      is necessary to safeguard the Application’s security.
+    %p
+      You are responsible for making all arrangements necessary for you to have
+      access to the application.
+    %p
+      If you have more than one set of usernames and passwords provided by
+      different Authorising Organisations, Advocates or Litigators (as applicable),
+      you shall only use each username and password in accordance with the permissions
+      and purposes authorised by the issuing Authorising Organisation.
+
+    %h2.govuk-heading-m
+      10. Intellectual Property Rights
+
+    %p
+      We are the owner or the licensee of all intellectual property rights in the
+      Application, and in the material published on it. These rights are protected
+      by international copyright laws and treaties. All such rights are reserved.
+    %p
+      You may print extracts from the contents of the Application only when
+      you need to do so to use the service provided by the Application, (and
+      provided that you do not alter, amend or delete any intellectual property
+      rights, notices or marks). Reproduction of all or part of the Application
+      or its contents in any form is prohibited for any other purpose. None of the
+      contents of the Application may be copied or otherwise incorporated into or
+      stored in any other electronic system, publication or other work in any form
+      (whether hard copy, electronic or other) other than as set out in this
+      section 10.
+    %p
+      You must not modify in any way the paper or digital copies of any materials
+      you have printed off or downloaded.
+    %p
+      If you print off, copy or download any part of the Application in breach
+      of these Terms, you must, at our option, return or destroy any copies that
+      you have made of any materials from the Application and we shall have the
+      right to take action in accordance with section 13.
+
+    %h2.govuk-heading-m
+      11. Prohibited Uses
+
+    %p
+      You may not use the application:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        in any way that breaches any applicable local, national or
+        international law or regulation; or
+      %li
+        in any way that is unlawful or fraudulent, or has any unlawful or
+        fraudulent purpose or effect; or
+      %li
+        to knowingly transmit any data, send or upload any material that
+        contains viruses, Trojan horses, worms, time-bombs, keystroke
+        loggers, spyware, adware or any other harmful programs or similar
+        computer code designed to adversely affect the operation of any
+        computer software or hardware
+    %p
+      You also agree:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        not to reproduce, duplicate, copy or re-sell any part of the application
+        in contravention of the provisions of these terms;
+      %li
+        not to access without authority, interfere with, damage or disrupt:
+        %ul.govuk-list.govuk-list--bullet
+          %li
+            any part of the Application;
+          %li
+            any equipment or network on which the Application is stored;
+          %li
+            any software and/or database used in the provision of the Application;
+          %li
+            any equipment or network or software owned or used by any third
+            party; or
+          %li
+            other users' accounts or information; and
+      %li
+        not to attack the Application via a denial-of-service attack or a
+        distributed denial-of-service attack
+    %p
+      By breaching this section 11, you may commit a criminal offence under
+      the Computer Misuse Act 1990. We will report any such breach to the
+      relevant law enforcement authorities and co-operate with those
+      authorities by disclosing your identity. In the event of such a
+      breach, your right to use the application will cease immediately.
+
+    %h2.govuk-heading-m
+      12. Links from the Application
+
+    %p
+      Where the Application contains links to other websites and resources
+      provided by third parties, these links are provided for your
+      information only. We have no control over the contents of those
+      websites or resources, and accept no responsibility for them or for
+      any loss or damage that may arise from your use of them.
+
+    %h2.govuk-heading-m
+      13. Suspension and Termination
+
+    %p
+      We may revoke the licence granted to you in section 4 and terminate
+      these Terms with immediate effect if you breach these Terms.
+    %p
+      We will determine, at our discretion, whether you have breached these
+      terms. When a breach of these Terms has occurred, we may take
+      whatever action we consider appropriate.
+    %p
+      If you don’t comply with these Terms, we may do any or all of the
+      following:
+    %ul.govuk-list.govuk-list--bullet
+      %li
+        immediately, temporarily or permanently withdraw your right to use the
+        Application;
+      %li
+        immediately, temporarily or permanently remove any material you have
+        uploaded to the Application;
+      %li
+        issue you a warning;
+      %li
+        issue legal proceedings against you for reimbursement of all costs on an
+        indemnity basis resulting from the breach (including, but not
+        limited to, reasonable administrative and legal costs)
+      %li
+        take further legal action against you; and
+      %li
+        disclose such information to law enforcement authorities as we reasonably
+        feel is necessary
+    %p
+      We exclude liability for our actions taken in response to breaches of
+      these Terms. The responses described in these Terms are not limited,
+      and we may take any other action we reasonably consider appropriate.
+
+    %h2.govuk-heading-m
+      14. Liability
+
+    %p
+      In accordance with the Terms, the Authorising Organisation shall be
+      responsible for the acts or omissions of the Authorised Representatives
+      and Litigators, and in respect of section 7, Advocates. The Authorising
+      Organisation shall defend, indemnify and hold us harmless against claims,
+      actions, proceedings, losses, damages, expenses and costs (including without
+      limitation court costs and reasonable legal fees) arising out of the acts
+      or omissions of the Authorised Representatives, Advocates and Litigators.
+    %p
+      To the extent permitted by law, the Application is provided without any
+      guarantee, conditions or warranties as to its availability, accuracy
+      or fitness for purpose.
+    %p
+      To the extent permitted by law, we expressly exclude all and any
+      liability to you in respect of all or any claims arising out of or in
+      connection with these terms and your use of the Application
+      (including without limitation as a result of negligence or any other
+      tort under statute or otherwise).
+    %p
+      To the extent permitted by law, we exclude all conditions, warranties
+      and other terms that might otherwise be implied by statute, common
+      law or the law of equity.
+    %p
+      We will not be liable for any loss or damage caused by a distributed
+      denial-of-service attack, viruses or other technologically harmful
+      material that may infect your computer equipment, computer programs,
+      data or other proprietary material due to your use of the Application
+      or to your downloading of any content on it, or on any website linked
+      to it.
+
+    %h2.govuk-heading-m
+      15. Changes to these Terms
+
+    %p
+      We may amend these Terms from time to time and we will notify you of
+      this on our website. Such changes are effective from the date they
+      are notified. Your continued use of the Application after this date shows
+      your acceptance of such changes.
+
+    %h2.govuk-heading-m
+      16. Information About You and Your Visits to Our Site
+
+    %h3.govuk-heading-s
+      Your information
+
+    %p
+      We collect and process your Personal Data (such as your contact details
+      and your IP address) in accordance with these Terms. By using the Application,
+      you consent to this.
+
+    %h3.govuk-heading-s Cookies
+
+    %p
+      We may use information obtained about you from cookies (files that your
+      computer or other device sends to us) which we can access when you
+      visit the Application in future. The cookies store small pieces of
+      information about our users, such as names and email addresses.
+    %p
+      There are different kinds of cookies with different functions:
+
+    %h3.govuk-heading-s
+      Session cookies:
+    %p
+      these cookies are only stored on your computer during your web session.
+      They are automatically deleted when the browser is closed. They
+      usually store an anonymous session ID, which allows you to browse a
+      website without having to log in to each page. They do not collect
+      any information from your computer.
+
+    %h3.govuk-heading-s
+      Persistent cookies:
+    %p
+      a persistent cookie is stored as a file on your computer, and it
+      remains there when you close your web browser. The cookie can be read
+      by the website that created it when you visit that website again. We
+      do not use persistent cookies other than for Google Analytics (please
+      see below for information on Google Analytics).
+
+    %h3.govuk-heading-s
+      Google Analytics:
+    %p
+      The Application uses Google Analytics, a web analytics service provided
+      by Google. Google Analytics uses cookies to analyse how the Application
+      is being used. The information generated by the cookie about your use of
+      the Application (including your IP address) will be transmitted to and stored
+      by Google on servers in the US. Google will use this information to evaluate
+      your use of the Application, compiling reports on the Application activity
+      and internet usage. Google may also transfer this information to third parties
+      where required to do so by law, or where such third parties process the
+      information on Google’s behalf. Google will not associate your IP address
+      with any other data held by Google. By using the Application, you consent
+      to Google processing your Personal Data in the manner and for the purposes
+      set out above.
+
+    %h3.govuk-heading-s
+      Deleting cookies:
+
+    %p
+      If you want to delete any cookies that are already on your computer,
+      please read the instructions for your file management software to
+      locate the file or directory that stores cookies. If you want to stop
+      cookies being stored on your computer in future, please refer to your
+      browser manufacturer’s instructions by clicking "Help"
+      in your browser menu. You can find out more about deleting or
+      controlling cookies at
+      = govuk_link_to 'www.AboutCookies.org', 'http://www.AboutCookies.org', rel: 'external'
+      \.
+    %p
+      Please note: if you delete our cookies or disable future cookies you
+      may not be able to access certain areas or features of the
+      Application.
+
+    %h2.govuk-heading-m
+      17. Jurisdiction and Applicable Law
+
+    %p
+      These
+      Terms and any disputes or claims arising out of or in connection with
+      them or their subject matter or formation (including non-contractual
+      disputes or claims) are governed by and construed in accordance with
+      the laws of England and Wales.
+    %p
+      We both irrevocably agree that the courts of England and Wales have
+      exclusive jurisdiction to settle any dispute or claim that arises out
+      of or in connection with these terms or their subject matter or
+      formation (including non-contractual disputes or claims).
+
+    %h3.govuk-heading-s
+      Contact Us
+
+    %p
+      You can write to us at: The Legal Aid Agency, 102 Petty France, London,
+      SW1H 9AJ.

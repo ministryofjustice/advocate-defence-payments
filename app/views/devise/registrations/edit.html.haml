@@ -1,4 +1,4 @@
-%h2= t('.edit_resource', resource: resource_name.to_s.humanize)
+%h2.govuk-heading-m= t('.edit_resource', resource: resource_name.to_s.humanize)
 
 = form_with(model: resource, as: resource_name, url: registration_path(resource_name), method: :put, builder: GOVUKDesignSystemFormBuilder::FormBuilder) do |f|
   = f.error_notification
@@ -27,7 +27,7 @@
   = f.govuk_submit t('.submit')
 
 
-%h3= t('.cancel_account')
+%h3.govuk-heading-s= t('.cancel_account')
 
 %p.govuk-body= t('.cancel_account_html', cancel_link: link_to(t('.cancel_account'), 'registration_path(resource_name)', data: { confirm: "Are you sure?" }, method: :delete))
 
