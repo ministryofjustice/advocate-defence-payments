@@ -1,4 +1,4 @@
-shared_examples 'geckoboard publishable report' do
+RSpec.shared_examples 'geckoboard publishable report' do
   let(:client) { double Geckoboard::Client }
   let(:datasets_client) { double Geckoboard::DatasetsClient }
   let(:dataset) { double Geckoboard::Dataset }
@@ -107,7 +107,7 @@ shared_examples 'geckoboard publishable report' do
   end
 end
 
-shared_examples 'returns valid items structure' do
+RSpec.shared_examples 'returns valid items structure' do
   it 'returns a geckoboard compatible format' do
     is_expected.to be_an(Array)
     expect(subject.first).to be_a(Hash)
@@ -118,4 +118,10 @@ shared_examples 'returns valid items structure' do
     fields = described_class.new.fields
     expect(subject.first.keys).to match_array fields.map(&:id)
   end
+end
+
+RSpec.shared_examples 'a disabler of view only actions' do
+  it { expect(assigns(:disable_analytics)).to be_truthy }
+  it { expect(assigns(:disable_phase_banner)).to be_truthy }
+  it { expect(assigns(:disable_flashes)).to be_truthy }
 end
