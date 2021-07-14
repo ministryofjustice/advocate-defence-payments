@@ -59,6 +59,7 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'shoulda/matchers'
 require 'webmock/rspec'
+require 'forgery_protection_helper'
 require 'parallel_spec_helper'
 require 'vcr_helper'
 require 'sidekiq/testing'
